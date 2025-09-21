@@ -1,0 +1,88 @@
+@use '@ems/ui/src/variables' as *;
+@use '@ems/ui/src/styles.scss';
+
+// Main app specific styles
+body {
+  margin: 0;
+  font-family: $ems-font-family;
+  background-color: $ems-surface;
+  color: $ems-on-surface;
+  line-height: 1.6;
+}
+
+// Main app layout
+.main-app {
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: $ems-spacing-md;
+  }
+
+  &__header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: $ems-spacing-md 0;
+    margin-bottom: $ems-spacing-lg;
+
+    h1 {
+      margin: 0;
+      color: $ems-primary;
+      font-weight: $ems-font-weight-bold;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    gap: $ems-spacing-md;
+    margin-bottom: $ems-spacing-lg;
+
+    .nav-button {
+      @extend .ems-btn;
+
+      &--active {
+        background: $ems-primary;
+        color: white;
+      }
+
+      &:not(.nav-button--active) {
+        background: transparent;
+        color: $ems-primary;
+        border: 2px solid $ems-primary;
+
+        &:hover {
+          background: $ems-primary;
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__content {
+    background: white;
+    border-radius: $ems-radius-lg;
+    padding: $ems-spacing-lg;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .main-app {
+    &__container {
+      padding: $ems-spacing-sm;
+    }
+
+    &__navigation {
+      flex-direction: column;
+
+      .nav-button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &__content {
+      padding: $ems-spacing-md;
+    }
+  }
+}

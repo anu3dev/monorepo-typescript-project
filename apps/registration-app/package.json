@@ -1,0 +1,18 @@
+{
+  "name": "@ems/registration-app",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5174",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@ems/ui": "workspace:*",
+    "@ems/api": "workspace:*",
+    "@ems/types": "workspace:*"
+  }
+}

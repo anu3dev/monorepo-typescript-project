@@ -1,0 +1,58 @@
+{
+  "name": "monorepo-typescript-project",
+  "version": "1.0.0",
+  "description": "Employee Management System - Monorepo with React apps (main-app, mood-app, registration-app) and shared packages (ui, types, api). Built with Vite, TypeScript, React, and SCSS. Uses pnpm workspaces for dependency management and build orchestration.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -w -r --parallel dev",
+    "build": "pnpm --filter @ems/main-app build",
+    "build:mood": "pnpm --filter @ems/mood-app build",
+    "build:registration": "pnpm --filter @ems/registration-app build",
+    "start": "pnpm --filter @ems/main-app dev",
+    "start:mood": "pnpm --filter @ems/mood-app dev",
+    "start:registration": "pnpm --filter @ems/registration-app dev",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "type-check": "pnpm -w -r --parallel type-check"
+  },
+  "keywords": ["monorepo", "typescript", "react", "vite", "employee-management", "pnpm-workspace"],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.17.0",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "workspaces": {
+    "packages": ["apps/*", "packages/*"]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@originjs/vite-plugin-federation": "^1.4.1",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@typescript-eslint/eslint-plugin": "^8.44.0",
+    "@typescript-eslint/parser": "^8.44.0",
+    "@vitejs/plugin-react": "^5.0.3",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.4.0",
+    "prettier": "^3.6.2",
+    "sass": "^1.93.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0",
+    "vite": "^7.1.6",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "dependencies": {
+    "scheduler": "^0.26.0"
+  }
+}

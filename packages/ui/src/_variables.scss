@@ -1,0 +1,33 @@
+// EMS Design System Variables
+// This file contains all shared SCSS variables for the EMS system
+
+// Color palette
+$ems-primary: #2563eb !default;
+$ems-primary-hover: #1d4ed8 !default;
+$ems-primary-light: #3b82f6 !default;
+$ems-on-primary: white !default;
+$ems-secondary: #64748b !default;
+$ems-success: #10b981 !default;
+$ems-warning: #f59e0b !default;
+$ems-error: #ef4444 !default;
+$ems-surface: #f8fafc !default;
+$ems-on-surface: #1e293b !default;
+
+// Spacing scale
+$ems-spacing-xs: 0.25rem !default;
+$ems-spacing-sm: 0.5rem !default;
+$ems-spacing-md: 1rem !default;
+$ems-spacing-lg: 1.5rem !default;
+$ems-spacing-xl: 2rem !default;
+
+// Border radius scale
+$ems-radius-sm: 4px !default;
+$ems-radius-md: 6px !default;
+$ems-radius-lg: 8px !default;
+
+// Typography
+$ems-font-family: Inter, system-ui, Arial, sans-serif !default;
+$ems-font-weight-normal: 400 !default;
+$ems-font-weight-medium: 500 !default;
+$ems-font-weight-semibold: 600 !default;
+$ems-font-weight-bold: 700 !default;
