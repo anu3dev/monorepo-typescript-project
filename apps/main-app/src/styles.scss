@@ -1,5 +1,5 @@
-@use '@ems/ui/src/variablesDefault' as *;
-@use '@ems/ui/src/styles.scss';
+@use '../../../packages/designTokens/src/_variablesDefault' as *;
+@use '../../../packages/ui/src/styles.scss';
 
 // Main app specific styles
 body {

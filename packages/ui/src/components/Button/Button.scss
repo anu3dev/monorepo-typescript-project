@@ -1,0 +1,77 @@
+@use 'sass:color';
+@use '../../../../designTokens/src/_variablesDefault' as *;
+
+.ems-btn {
+  padding: $ems-spacing-sm $ems-spacing-md;
+  border-radius: $ems-radius-md;
+  border: none;
+  background: var(--ems-primary, $ems-primary);
+  color: var(--ems-on-primary, $ems-on-primary);
+  cursor: pointer;
+  font-weight: $ems-font-weight-semibold;
+  font-family: $ems-font-family;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--ems-primary-hover, $ems-primary-hover);
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  // Button variants
+  &--secondary {
+    background: var(--ems-secondary, $ems-secondary);
+    color: white;
+
+    &:hover {
+      background: color.adjust($ems-secondary, $lightness: -10%);
+    }
+  }
+
+  &--success {
+    background: var(--ems-success, $ems-success);
+    color: white;
+
+    &:hover {
+      background: color.adjust($ems-success, $lightness: -10%);
+    }
+  }
+
+  &--warning {
+    background: var(--ems-warning, $ems-warning);
+    color: white;
+
+    &:hover {
+      background: color.adjust($ems-warning, $lightness: -10%);
+    }
+  }
+
+  &--error {
+    background: var(--ems-error, $ems-error);
+    color: white;
+
+    &:hover {
+      background: color.adjust($ems-error, $lightness: -10%);
+    }
+  }
+
+  // Button sizes
+  &--small {
+    padding: $ems-spacing-xs $ems-spacing-sm;
+    font-size: 0.875rem;
+  }
+
+  &--large {
+    padding: $ems-spacing-md $ems-spacing-lg;
+    font-size: 1.125rem;
+  }
+}

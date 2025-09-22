@@ -4,7 +4,8 @@
     "paths": {
       "@ems/ui": ["packages/ui/src"],
       "@ems/api": ["packages/api/src"],
-      "@ems/types": ["packages/types/src"]
+      "@ems/types": ["packages/types/src"],
+      "@ems/design-tokens": ["packages/designTokens/src"]
     },
     "jsx": "react-jsx",
     "moduleResolution": "bundler",

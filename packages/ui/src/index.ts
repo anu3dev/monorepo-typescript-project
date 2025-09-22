@@ -1,3 +1,3 @@
-export { Button } from './Button';
-export { NotificationProvider } from './Notification';
-export { notify } from './notify';
+export { Button } from './components/Button/Button';
+export { NotificationProvider } from './components/Notification/Notification';
+export { notify } from './components/Notification/notify';
