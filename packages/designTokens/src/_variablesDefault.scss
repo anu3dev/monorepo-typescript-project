@@ -4,7 +4,6 @@
 // Color palette - Default theme (Blue)
 $ems-primary: #2563eb !default;
 $ems-primary-hover: #1d4ed8 !default;
-$ems-primary-light: #3b82f6 !default;
 $ems-on-primary: white !default;
 $ems-secondary: #64748b !default;
 $ems-success: #10b981 !default;
@@ -31,12 +30,3 @@ $ems-font-weight-normal: 400 !default;
 $ems-font-weight-medium: 500 !default;
 $ems-font-weight-semibold: 600 !default;
 $ems-font-weight-bold: 700 !default;
-
-// Z-index scale
-$ems-z-dropdown: 1000 !default;
-$ems-z-sticky: 1020 !default;
-$ems-z-fixed: 1030 !default;
-$ems-z-modal-backdrop: 1040 !default;
-$ems-z-modal: 1050 !default;
-$ems-z-popover: 1060 !default;
-$ems-z-tooltip: 1070 !default;
