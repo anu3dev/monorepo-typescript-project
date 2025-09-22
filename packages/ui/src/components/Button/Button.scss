@@ -5,15 +5,15 @@
   padding: $ems-spacing-sm $ems-spacing-md;
   border-radius: $ems-radius-md;
   border: none;
-  background: var(--ems-primary, $ems-primary);
-  color: var(--ems-on-primary, $ems-on-primary);
+  background: $ems-primary;
+  color: $ems-on-primary;
   cursor: pointer;
   font-weight: $ems-font-weight-semibold;
   font-family: $ems-font-family;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    background: var(--ems-primary-hover, $ems-primary-hover);
+    background: $ems-primary-hover;
     transform: translateY(-1px);
   }
 
@@ -29,7 +29,7 @@
 
   // Button variants
   &--secondary {
-    background: var(--ems-secondary, $ems-secondary);
+    background: $ems-secondary;
     color: white;
 
     &:hover {
@@ -38,7 +38,7 @@
   }
 
   &--success {
-    background: var(--ems-success, $ems-success);
+    background: $ems-success;
     color: white;
 
     &:hover {
@@ -47,7 +47,7 @@
   }
 
   &--warning {
-    background: var(--ems-warning, $ems-warning);
+    background: $ems-warning;
     color: white;
 
     &:hover {
@@ -56,7 +56,7 @@
   }
 
   &--error {
-    background: var(--ems-error, $ems-error);
+    background: $ems-error;
     color: white;
 
     &:hover {

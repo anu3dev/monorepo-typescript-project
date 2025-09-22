@@ -1,2 +1,16 @@
-// Mood App Styles - Minimal import for UI components
+// Mood App Styles - UI components with custom properties
+@use '@ems/designTokens/src/_variablesDefault' as *;
 @use '@ems/ui/src/styles.scss';
+
+// Define CSS custom properties for theming
+:root {
+  --ems-primary: #{$ems-primary};
+  --ems-primary-hover: #{$ems-primary-hover};
+  --ems-on-primary: #{$ems-on-primary};
+  --ems-secondary: #{$ems-secondary};
+  --ems-success: #{$ems-success};
+  --ems-warning: #{$ems-warning};
+  --ems-error: #{$ems-error};
+  --ems-surface: #{$ems-surface};
+  --ems-on-surface: #{$ems-on-surface};
+}
