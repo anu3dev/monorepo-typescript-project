@@ -1,16 +1,3 @@
 // Registration App Styles - UI components with custom properties
 @use '../../../packages/designTokens/src/variablesDefault' as *;
 @use '../../../packages/ui/src/styles.scss';
-
-// Define CSS custom properties for theming
-:root {
-  --ems-primary: #{$ems-primary};
-  --ems-primary-hover: #{$ems-primary-hover};
-  --ems-on-primary: #{$ems-on-primary};
-  --ems-secondary: #{$ems-secondary};
-  --ems-success: #{$ems-success};
-  --ems-warning: #{$ems-warning};
-  --ems-error: #{$ems-error};
-  --ems-surface: #{$ems-surface};
-  --ems-on-surface: #{$ems-on-surface};
-}

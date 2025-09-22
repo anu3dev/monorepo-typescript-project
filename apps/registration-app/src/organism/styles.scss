@@ -1,0 +1,23 @@
+// Registration App Organism Styles
+@use '../../../../packages/designTokens/src/_variablesDefault' as *;
+
+.registration-container {
+  flex: 1;
+  border: 2px solid var(--ems-border, $ems-border);
+  border-radius: $ems-radius-lg;
+  padding: $ems-spacing-md;
+  background-color: var(--ems-bg, $ems-bg); 
+}
+
+.registration-header {
+  margin: 0 0 10px 0;
+  color: var(--ems-heading2, $ems-heading2);
+}
+
+.registration-content {
+  padding: $ems-spacing-lg;
+
+  h1 {
+    margin-bottom: $ems-spacing-md;
+  }
+}

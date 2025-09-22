@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import MoodApp from './MoodApp';
+import MoodApp from './organism/MoodApp';
 
 export default function App() {
   useEffect(() => {

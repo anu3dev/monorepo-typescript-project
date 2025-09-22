@@ -1,0 +1,23 @@
+// Mood App Organism Styles
+@use '../../../../packages/designTokens/src/_variablesDefault' as *;
+
+.mood-container {
+  flex: 1;
+  border: 2px solid var(--ems-border, $ems-border);
+  border-radius: $ems-radius-lg;
+  padding: $ems-spacing-md;
+  background-color: var(--ems-bg, $ems-bg); 
+}
+
+.mood-header {
+  margin: 0 0 10px 0;
+  color: var(--ems-heading2, $ems-heading2);
+}
+
+.mood-content {
+  padding: $ems-spacing-lg;
+
+  h1 {
+    margin-bottom: $ems-spacing-md;
+  }
+}

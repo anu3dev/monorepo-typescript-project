@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Import the actual app components directly from their source files
-import MoodApp from '../../mood-app/src/MoodApp';
-import RegistrationApp from '../../registration-app/src/RegistrationApp';
+import MoodApp from '../../mood-app/src/organism/MoodApp';
+import RegistrationApp from '../../registration-app/src/organism/RegistrationApp';
 
 export default function MainEmployeeApp() {
   return (
@@ -32,7 +32,7 @@ export default function MainEmployeeApp() {
           individually:
           <br />• Mood App: <code>npm run start:mood</code> (port 5174)
           <br />• Registration App: <code>npm run start:registration</code>{' '}
-          (port 5178)
+          (port 5175)
         </p>
       </div>
     </div>

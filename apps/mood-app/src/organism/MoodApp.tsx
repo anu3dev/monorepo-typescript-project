@@ -1,4 +1,5 @@
 import { Button, NotificationProvider, notify } from '@ems/ui';
+import './styles.scss';
 
 export default function MoodApp() {
   const save = async () => {
@@ -12,19 +13,9 @@ export default function MoodApp() {
 
   return (
     <NotificationProvider>
-      <div
-        style={{
-          flex: 1,
-          border: '2px solid #10b981',
-          borderRadius: '8px',
-          padding: '15px',
-          backgroundColor: '#f0fdf4',
-        }}
-      >
-        <h2 style={{ margin: '0 0 10px 0', color: '#10b981' }}>
-          🎭 Mood Tracker
-        </h2>
-        <div style={{ padding: 20 }}>
+      <div className="mood-container">
+        <h2 className="mood-header">🎭 Mood Tracker</h2>
+        <div className="mood-content">
           <h1>Employee Mood</h1>
           <Button onClick={save}>I'm happy</Button>
         </div>

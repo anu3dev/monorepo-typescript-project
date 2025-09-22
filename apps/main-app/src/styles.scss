@@ -4,13 +4,7 @@
 
 // Define CSS custom properties for theming
 :root {
-  --ems-primary: #{$ems-primary};
-  --ems-primary-hover: #{$ems-primary-hover};
-  --ems-on-primary: #{$ems-on-primary};
-  --ems-secondary: #{$ems-secondary};
-  --ems-success: #{$ems-success};
-  --ems-warning: #{$ems-warning};
-  --ems-error: #{$ems-error};
-  --ems-surface: #{$ems-surface};
-  --ems-on-surface: #{$ems-on-surface};
+  --ems-border: #{#10b981};
+  --ems-bg: #{#f0fdf4};
+  --ems-heading2: #{#10b981};
 }
