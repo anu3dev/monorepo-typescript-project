@@ -3,8 +3,8 @@
 
 .ems-app-card-container {
   flex: 1;
-  max-width: 450px;
-  min-width: 320px;
+  max-width: $ems-card-max-width;
+  min-width: $ems-card-min-width;
   width: auto;
   border: 2px solid var(--ems-border, $ems-border);
   border-radius: $ems-radius-lg;
@@ -18,7 +18,7 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $ems-breakpoint-mobile) {
     max-width: 100%;
     min-width: auto;
     margin: 0;
@@ -26,9 +26,9 @@
 }
 
 .ems-app-card-header {
-  margin: 0 0 10px 0;
+  margin: 0 0 $ems-spacing-xs 0;
   color: var(--ems-heading2, $ems-heading2);
-  font-size: 1.25rem;
+  font-size: $ems-font-size-xl;
   font-weight: $ems-font-weight-semibold;
 }
 
@@ -38,7 +38,7 @@
   h3 {
     margin-bottom: $ems-spacing-md;
     color: $ems-on-surface;
-    font-size: 1.125rem;
+    font-size: $ems-font-size-lg;
     font-weight: $ems-font-weight-medium;
   }
 }
@@ -49,15 +49,15 @@
   background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(16, 185, 129, 0.08));
   border-top: 1px solid rgba(59, 130, 246, 0.15);
   border-radius: 0 0 $ems-radius-lg $ems-radius-lg;
-  font-size: 0.75rem;
-  color: #475569;
+  font-size: $ems-font-size-xs;
+  color: $ems-standalone-text-color;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: $ems-spacing-xs;
 
   .standalone-emoji {
-    font-size: 0.875rem;
+    font-size: $ems-font-size-sm;
   }
 
   .standalone-text {
@@ -65,18 +65,18 @@
   }
 
   code {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: $ems-code-background;
     padding: 2px 6px;
-    border-radius: 4px;
+    border-radius: $ems-radius-sm;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
-    color: #1e40af;
-    font-size: 0.7rem;
+    color: $ems-code-text;
+    font-size: $ems-font-size-xs;
     font-weight: $ems-font-weight-semibold;
-    border: 1px solid rgba(59, 130, 246, 0.2);
+    border: 1px solid $ems-code-border;
   }
 
   .port-info {
-    color: #059669;
+    color: $ems-port-color;
     font-weight: $ems-font-weight-medium;
   }
 }

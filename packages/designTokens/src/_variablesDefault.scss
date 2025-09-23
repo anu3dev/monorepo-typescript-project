@@ -12,6 +12,10 @@ $ems-error: #ef4444 !default;
 $ems-surface: #f8fafc !default;
 $ems-on-surface: #1e293b !default;
 
+// Additional colors for text and backgrounds
+$ems-text-muted: #666 !default;
+$ems-background-light: #f0fdf4 !default;
+
 // Spacing scale
 $ems-spacing-xs: 0.25rem !default;
 $ems-spacing-sm: 0.5rem !default;
@@ -31,7 +35,33 @@ $ems-font-weight-medium: 500 !default;
 $ems-font-weight-semibold: 600 !default;
 $ems-font-weight-bold: 700 !default;
 
-//
+// Font sizes
+$ems-font-size-xs: 0.75rem !default;
+$ems-font-size-sm: 0.875rem !default;
+$ems-font-size-base: 1rem !default;
+$ems-font-size-lg: 1.125rem !default;
+$ems-font-size-xl: 1.25rem !default;
+$ems-font-size-2xl: 1.75rem !default;
+
+// Standalone info colors
+$ems-standalone-text-color: #475569 !default;
+$ems-code-background: rgba(255, 255, 255, 0.9) !default;
+$ems-code-text: #1e40af !default;
+$ems-code-border: rgba(59, 130, 246, 0.2) !default;
+$ems-port-color: #059669 !default;
+
+// Container and layout
+$ems-container-max-width: 1200px !default;
+$ems-container-content-max-width: 600px !default;
+
+// Card dimensions
+$ems-card-max-width: 450px !default;
+$ems-card-min-width: 320px !default;
+
+// Responsive breakpoints
+$ems-breakpoint-mobile: 768px !default;
+
+// Legacy theme tokens (will be overridden by CSS custom properties)
 $ems-border: #f59e0b !default;
 $ems-bg: #fffbeb !default;
 $ems-heading2: #f59e0b !default;

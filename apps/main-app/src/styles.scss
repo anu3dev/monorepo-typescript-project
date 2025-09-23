@@ -2,7 +2,7 @@
 @use '../../../packages/designTokens/src/_variablesDefault' as *;
 @use '../../../packages/ui/src/styles.scss';
 
-// Define CSS custom properties for theming
+// Define CSS custom properties for theming (only overrides)
 :root {
   --ems-border: #{#10b981};
   --ems-bg: #{#f0fdf4};
@@ -12,10 +12,10 @@
 // MainEmployeeApp styles
 .main-employee-app-container {
   padding: $ems-spacing-lg;
-  max-width: 1200px;
+  max-width: $ems-container-max-width;
   margin: 0 auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: $ems-breakpoint-mobile) {
     padding: $ems-spacing-md;
   }
 }
@@ -25,23 +25,23 @@
   color: $ems-on-surface;
   text-align: center;
 
-  @media (max-width: 768px) {
-    font-size: 1.75rem;
+  @media (max-width: $ems-breakpoint-mobile) {
+    font-size: $ems-font-size-2xl;
     margin-bottom: $ems-spacing-md;
   }
 }
 
 .main-employee-app-description {
   margin-bottom: $ems-spacing-xl;
-  color: #666;
+  color: $ems-text-muted;
   text-align: center;
-  max-width: 600px;
+  max-width: $ems-container-content-max-width;
   margin-left: auto;
   margin-right: auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: $ems-breakpoint-mobile) {
     margin-bottom: $ems-spacing-lg;
-    font-size: 0.9rem;
+    font-size: $ems-font-size-sm;
   }
 }
 
@@ -51,14 +51,14 @@
   justify-content: center;
   align-items: flex-start;
 
-  @media (max-width: 768px) {
+  @media (max-width: $ems-breakpoint-mobile) {
     flex-direction: column;
     gap: $ems-spacing-md;
     align-items: center;
   }
 
   .ems-app-card-container {
-    @media (max-width: 768px) {
+    @media (max-width: $ems-breakpoint-mobile) {
       width: 100%;
       max-width: 100%;
     }
