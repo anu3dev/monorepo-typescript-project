@@ -9,6 +9,8 @@ export const AppCard: React.FC<AppCardProps> = ({
   subHeading,
   handleButtonClick,
   buttonText,
+  isStandAlone = false,
+  standaloneInfo,
 }) => {
   return (
     <NotificationProvider>
@@ -18,6 +20,15 @@ export const AppCard: React.FC<AppCardProps> = ({
           <h3>{subHeading}</h3>
           <Button onClick={handleButtonClick}>{buttonText}</Button>
         </div>
+
+        {!isStandAlone && standaloneInfo && (
+          <div className="ems-app-card-standalone-info">
+            <span className="standalone-emoji">🚀</span>
+            <span className="standalone-text">Standalone:</span>
+            <code>{standaloneInfo.command}</code>
+            <span className="port-info">:{standaloneInfo.port}</span>
+          </div>
+        )}
       </div>
     </NotificationProvider>
   );

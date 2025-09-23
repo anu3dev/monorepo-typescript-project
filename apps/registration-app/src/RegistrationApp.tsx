@@ -19,6 +19,11 @@ export default function RegistrationApp({
       handleButtonClick={save}
       buttonText="Register Employee"
       isStandAlone={isStandAlone}
+      standaloneInfo={{
+        appName: 'Registration App',
+        command: 'npm run start:registration',
+        port: 5175,
+      }}
     />
   );
 }

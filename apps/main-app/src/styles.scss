@@ -8,3 +8,23 @@
   --ems-bg: #{#f0fdf4};
   --ems-heading2: #{#10b981};
 }
+
+// MainEmployeeApp styles
+.main-employee-app-container {
+  padding: 20px;
+}
+
+.main-employee-app-title {
+  margin-bottom: 0;
+}
+
+.main-employee-app-description {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.main-employee-app-content {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}

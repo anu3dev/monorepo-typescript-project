@@ -17,6 +17,11 @@ export default function MoodApp({ isStandAlone }: MoodAppProps) {
       handleButtonClick={save}
       buttonText="Save Mood"
       isStandAlone={isStandAlone}
+      standaloneInfo={{
+        appName: 'Mood App',
+        command: 'npm run start:mood',
+        port: 5174,
+      }}
     />
   );
 }

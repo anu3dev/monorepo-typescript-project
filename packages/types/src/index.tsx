@@ -26,4 +26,9 @@ export interface AppCardProps
   handleButtonClick: React.MouseEventHandler<HTMLButtonElement>;
   buttonText: string;
   isStandAlone?: boolean;
+  standaloneInfo?: {
+    appName: string;
+    command: string;
+    port: number;
+  };
 }
