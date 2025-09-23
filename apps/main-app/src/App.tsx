@@ -1,8 +1,8 @@
 import React from 'react';
 
 // Import the actual app components directly from their source files
-import MoodApp from '../../mood-app/src/organism/MoodApp';
-import RegistrationApp from '../../registration-app/src/organism/RegistrationApp';
+import MoodApp from '../../mood-app/src/MoodApp';
+import RegistrationApp from '../../registration-app/src/RegistrationApp';
 
 export default function MainEmployeeApp() {
   return (

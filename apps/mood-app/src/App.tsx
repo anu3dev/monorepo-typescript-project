@@ -1,10 +1,6 @@
-import React, { useEffect } from 'react';
-import MoodApp from './organism/MoodApp';
+import { AppProps } from '@ems/types';
+import MoodApp from './MoodApp';
 
-export default function App() {
-  useEffect(() => {
-    document.documentElement.style.setProperty('--ems-primary', '#10b981');
-  }, []);
-
-  return <MoodApp />;
+export default function App({ isStandAlone }: AppProps) {
+  return <MoodApp isStandAlone={isStandAlone} />;
 }

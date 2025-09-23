@@ -1,7 +1,7 @@
 // Registration App Organism Styles
-@use '../../../../packages/designTokens/src/_variablesDefault' as *;
+@use '../../../../designTokens/src/variablesDefault' as *;
 
-.registration-container {
+.ems-app-card-container {
   flex: 1;
   border: 2px solid var(--ems-border, $ems-border);
   border-radius: $ems-radius-lg;
@@ -9,15 +9,15 @@
   background-color: var(--ems-bg, $ems-bg); 
 }
 
-.registration-header {
+.ems-app-card-header {
   margin: 0 0 10px 0;
   color: var(--ems-heading2, $ems-heading2);
 }
 
-.registration-content {
+.ems-app-card-content {
   padding: $ems-spacing-lg;
 
-  h1 {
+  h3 {
     margin-bottom: $ems-spacing-md;
   }
 }

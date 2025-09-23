@@ -1,0 +1,22 @@
+import { AppCard, notify } from '@ems/ui';
+import { MoodAppProps } from '@ems/types';
+
+export default function MoodApp({ isStandAlone }: MoodAppProps) {
+  const save = async () => {
+    try {
+      notify('success', 'Mood saved (dummy)');
+    } catch (e: unknown) {
+      notify('error', e instanceof Error ? e.message : 'Failed');
+    }
+  };
+
+  return (
+    <AppCard
+      heading="🎭 Mood Tracker"
+      subHeading="Employee Mood"
+      handleButtonClick={save}
+      buttonText="Save Mood"
+      isStandAlone={isStandAlone}
+    />
+  );
+}
