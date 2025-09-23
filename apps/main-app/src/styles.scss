@@ -11,20 +11,56 @@
 
 // MainEmployeeApp styles
 .main-employee-app-container {
-  padding: 20px;
+  padding: $ems-spacing-lg;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: $ems-spacing-md;
+  }
 }
 
 .main-employee-app-title {
-  margin-bottom: 0;
+  margin-bottom: $ems-spacing-lg;
+  color: $ems-on-surface;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+    margin-bottom: $ems-spacing-md;
+  }
 }
 
 .main-employee-app-description {
-  margin-bottom: 20px;
+  margin-bottom: $ems-spacing-xl;
   color: #666;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    margin-bottom: $ems-spacing-lg;
+    font-size: 0.9rem;
+  }
 }
 
 .main-employee-app-content {
   display: flex;
-  gap: 20px;
-  margin-top: 20px;
+  gap: $ems-spacing-lg;
+  justify-content: center;
+  align-items: flex-start;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: $ems-spacing-md;
+    align-items: center;
+  }
+
+  .ems-app-card-container {
+    @media (max-width: 768px) {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
 }

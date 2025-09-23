@@ -1,3 +1,13 @@
 // Mood App Styles - UI components with custom properties
-@use '../../../packages/designTokens/src/variablesDefault' as *;
+@use '../../../packages/designTokens/src/_variablesDefault' as *;
 @use '../../../packages/ui/src/styles.scss';
+
+// Standalone app container - left aligned and mobile responsive
+.mood-standalone-container {
+  padding: $ems-spacing-lg;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    padding: $ems-spacing-md;
+  }
+}

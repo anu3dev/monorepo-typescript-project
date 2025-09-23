@@ -1,17 +1,35 @@
-// Registration App Organism Styles
-@use '../../../../designTokens/src/variablesDefault' as *;
+// App Card Component Styles
+@use '../../../../designTokens/src/_variablesDefault' as *;
 
 .ems-app-card-container {
   flex: 1;
+  max-width: 450px;
+  min-width: 320px;
+  width: auto;
   border: 2px solid var(--ems-border, $ems-border);
   border-radius: $ems-radius-lg;
   padding: $ems-spacing-md;
-  background-color: var(--ems-bg, $ems-bg); 
+  background-color: var(--ems-bg, $ems-bg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    min-width: auto;
+    margin: 0;
+  }
 }
 
 .ems-app-card-header {
   margin: 0 0 10px 0;
   color: var(--ems-heading2, $ems-heading2);
+  font-size: 1.25rem;
+  font-weight: $ems-font-weight-semibold;
 }
 
 .ems-app-card-content {
@@ -19,5 +37,46 @@
 
   h3 {
     margin-bottom: $ems-spacing-md;
+    color: $ems-on-surface;
+    font-size: 1.125rem;
+    font-weight: $ems-font-weight-medium;
+  }
+}
+
+.ems-app-card-standalone-info {
+  margin: 0 (-$ems-spacing-md) (-$ems-spacing-md) (-$ems-spacing-md);
+  padding: $ems-spacing-xs $ems-spacing-sm;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(16, 185, 129, 0.08));
+  border-top: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 0 0 $ems-radius-lg $ems-radius-lg;
+  font-size: 0.75rem;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $ems-spacing-xs;
+
+  .standalone-emoji {
+    font-size: 0.875rem;
+  }
+
+  .standalone-text {
+    font-weight: $ems-font-weight-medium;
+  }
+
+  code {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    color: #1e40af;
+    font-size: 0.7rem;
+    font-weight: $ems-font-weight-semibold;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+  }
+
+  .port-info {
+    color: #059669;
+    font-weight: $ems-font-weight-medium;
   }
 }
