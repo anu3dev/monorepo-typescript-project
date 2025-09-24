@@ -279,14 +279,14 @@ html, body {
 // MainEmployeeApp styles
 .main-employee-app-container {
   flex: 1;
-  padding: $ems-spacing-lg;
+  padding: calc(64px + #{$ems-spacing-lg}) $ems-spacing-lg $ems-spacing-lg;
   max-width: $ems-container-max-width;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 
   @media (max-width: $ems-breakpoint-mobile) {
-    padding: $ems-spacing-md $ems-spacing-sm;
+    padding: calc(64px + #{$ems-spacing-md}) $ems-spacing-sm $ems-spacing-md;
     width: 100%;
     margin: 0;
   }
