@@ -101,11 +101,26 @@ export default function MainEmployeeApp() {
         <div className="coming-soon-section">
           <h2>🚀 Available Tools</h2>
           <p>Start exploring with our current applications:</p>
-        </div>
-
-        <div className="main-employee-app-content">
-          <MoodApp />
-          <RegistrationApp />
+          <div className="main-employee-app-content">
+            <MoodApp />
+            <RegistrationApp />
+            <div className="ems-app-card-container">
+              <div className="ems-app-card">
+                <div className="ems-app-card-header">
+                  <h2 className="ems-app-card-title">🛠️ More Tools</h2>
+                </div>
+                <div className="ems-app-card-content">
+                  <p>
+                    Additional productivity tools coming soon to enhance your
+                    workflow.
+                  </p>
+                  <button className="ems-button" disabled>
+                    Coming Soon
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="upcoming-tools">

@@ -141,9 +141,9 @@
   display: flex;
   align-items: center;
   gap: $ems-spacing-xs;
-  background: $ems-surface-variant;
-  color: $ems-on-surface;
-  border: 1px solid $ems-border-color;
+  background: rgba(16, 185, 129, 0.1);
+  color: #10b981;
+  border: 1px solid rgba(16, 185, 129, 0.3);
   padding: $ems-spacing-xs $ems-spacing-md;
   border-radius: $ems-border-radius-md;
   cursor: pointer;
@@ -151,9 +151,9 @@
   transition: all 0.2s ease;
 
   &:hover {
-    background-color: $ems-primary;
-    color: $ems-on-primary;
-    border-color: $ems-primary;
+    background-color: #10b981;
+    color: white;
+    border-color: #10b981;
     transform: translateY(-1px);
   }
 }
