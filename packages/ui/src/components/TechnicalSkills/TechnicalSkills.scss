@@ -1,0 +1,151 @@
+@use '../../../../../packages/designTokens/src/_variablesDefault' as *;
+
+// Technical Skills Section
+.technical-skills {
+  margin: $ems-spacing-xl 0;
+  padding: $ems-spacing-xl;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8), rgba(241, 245, 249, 0.8));
+  border-radius: $ems-radius-lg;
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (max-width: $ems-breakpoint-mobile) {
+    margin: $ems-spacing-lg 0;
+    padding: $ems-spacing-md $ems-spacing-sm;
+  }
+
+  @media (max-width: 480px) {
+    padding: $ems-spacing-md $ems-spacing-sm;
+  }
+}
+
+.skills-title {
+  text-align: center;
+  font-size: $ems-font-size-xl;
+  font-weight: $ems-font-weight-bold;
+  color: #1e293b;
+  margin: 0 0 $ems-spacing-xl 0;
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  @media (max-width: $ems-breakpoint-mobile) {
+    font-size: $ems-font-size-lg;
+    margin-bottom: $ems-spacing-lg;
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $ems-spacing-lg;
+  width: 100%;
+
+  @media (max-width: $ems-breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $ems-spacing-md;
+  }
+
+  @media (max-width: $ems-breakpoint-mobile) {
+    grid-template-columns: 1fr;
+    gap: $ems-spacing-md;
+  }
+
+  @media (max-width: 480px) {
+    gap: $ems-spacing-sm;
+  }
+}
+
+.skill-category {
+  background: white;
+  border-radius: $ems-radius-md;
+  padding: $ems-spacing-xl;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 200px;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: $ems-breakpoint-mobile) {
+    padding: $ems-spacing-lg;
+    min-height: 150px;
+  }
+
+  @media (max-width: 480px) {
+    padding: $ems-spacing-md;
+    min-height: 120px;
+  }
+}
+
+.category-title {
+  font-size: $ems-font-size-base;
+  font-weight: $ems-font-weight-semibold;
+  color: #1e293b;
+  margin: 0 0 $ems-spacing-md 0;
+  border-bottom: 2px solid #10b981;
+  padding-bottom: $ems-spacing-xs;
+
+  @media (max-width: $ems-breakpoint-mobile) {
+    font-size: $ems-font-size-sm;
+  }
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $ems-spacing-xs;
+  width: 100%;
+}
+
+.skill-item {
+  display: inline-block;
+  padding: $ems-spacing-xs $ems-spacing-sm;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: $ems-radius-sm;
+  font-size: $ems-font-size-xs;
+  font-weight: $ems-font-weight-medium;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  word-break: break-word;
+  white-space: nowrap;
+
+  &:hover {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+    transform: translateY(-1px);
+  }
+
+  &.learning {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    color: #92400e;
+    border-color: #f59e0b;
+    font-style: italic;
+
+    &:hover {
+      background: #f59e0b;
+      color: white;
+    }
+  }
+
+  @media (max-width: $ems-breakpoint-mobile) {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+  }
+}

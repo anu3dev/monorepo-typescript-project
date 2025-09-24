@@ -1,7 +1,7 @@
 {
   "name": "monorepo-typescript-project",
   "version": "1.0.0",
-  "description": "Employee Management System - Monorepo with React apps (main-app, mood-app, registration-app) and shared packages (ui, types, api). Built with Vite, TypeScript, React, and SCSS. Uses pnpm workspaces for dependency management and build orchestration.",
+  "description": "E2E Toolkit - A comprehensive utility platform featuring multiple tools including Mood Gazer, Quick Forms, and more. Built with Vite, TypeScript, React, and SCSS. Perfect for showcasing modern web development skills and demonstrating full-stack capabilities.",
   "private": true,
   "type": "module",
   "scripts": {
@@ -18,7 +18,7 @@
     "format:check": "prettier --check .",
     "type-check": "pnpm -w -r --parallel type-check"
   },
-  "keywords": ["monorepo", "typescript", "react", "vite", "employee-management", "pnpm-workspace"],
+  "keywords": ["monorepo", "typescript", "react", "vite", "utility-tools", "toolkit", "pnpm-workspace", "learning-project", "portfolio"],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.17.0",

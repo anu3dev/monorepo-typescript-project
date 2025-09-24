@@ -10,7 +10,9 @@ $ems-success: #10b981 !default;
 $ems-warning: #f59e0b !default;
 $ems-error: #ef4444 !default;
 $ems-surface: #f8fafc !default;
+$ems-surface-variant: #f1f5f9 !default;
 $ems-on-surface: #1e293b !default;
+$ems-border-color: #e2e8f0 !default;
 
 // Additional colors for text and backgrounds
 $ems-text-muted: #666 !default;
@@ -27,6 +29,12 @@ $ems-spacing-xl: 2rem !default;
 $ems-radius-sm: 4px !default;
 $ems-radius-md: 6px !default;
 $ems-radius-lg: 8px !default;
+$ems-border-radius-sm: 4px !default;
+$ems-border-radius-md: 6px !default;
+
+// Shadows
+$ems-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !default;
+$ems-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !default;
 
 // Typography
 $ems-font-family: Inter, system-ui, Arial, sans-serif !default;
@@ -60,6 +68,7 @@ $ems-card-min-width: 320px !default;
 
 // Responsive breakpoints
 $ems-breakpoint-mobile: 768px !default;
+$ems-breakpoint-tablet: 1024px !default;
 
 // Legacy theme tokens (will be overridden by CSS custom properties)
 $ems-border: #f59e0b !default;

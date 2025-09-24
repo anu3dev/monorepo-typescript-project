@@ -2,3 +2,6 @@ export { Button } from './components/Button/Button';
 export { NotificationProvider } from './components/Notification/Notification';
 export { notify } from './components/Notification/notify';
 export { AppCard } from './components/AppCard/AppCard';
+export { Navigation } from './components/Navigation/Navigation';
+export { Footer } from './components/Footer/Footer';
+export { TechnicalSkills } from './components/TechnicalSkills/TechnicalSkills';

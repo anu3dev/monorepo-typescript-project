@@ -5,16 +5,18 @@
   padding: $ems-spacing-sm $ems-spacing-md;
   border-radius: $ems-radius-md;
   border: none;
-  background: $ems-primary;
-  color: $ems-on-primary;
+  background: #10b981;
+  color: white;
   cursor: pointer;
   font-weight: $ems-font-weight-semibold;
   font-family: $ems-font-family;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
 
   &:hover {
-    background: $ems-primary-hover;
-    transform: translateY(-1px);
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
   }
 
   &:active {
@@ -29,38 +31,46 @@
 
   // Button variants
   &--secondary {
-    background: $ems-secondary;
+    background: #6b7280;
     color: white;
+    box-shadow: 0 2px 4px rgba(107, 114, 128, 0.2);
 
     &:hover {
-      background: color.adjust($ems-secondary, $lightness: -10%);
+      background: #4b5563;
+      box-shadow: 0 4px 12px rgba(107, 114, 128, 0.3);
     }
   }
 
   &--success {
-    background: $ems-success;
+    background: #10b981;
     color: white;
+    box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
 
     &:hover {
-      background: color.adjust($ems-success, $lightness: -10%);
+      background: #059669;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
     }
   }
 
   &--warning {
-    background: $ems-warning;
+    background: #f59e0b;
     color: white;
+    box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
 
     &:hover {
-      background: color.adjust($ems-warning, $lightness: -10%);
+      background: #d97706;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
     }
   }
 
   &--error {
-    background: $ems-error;
+    background: #ef4444;
     color: white;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
 
     &:hover {
-      background: color.adjust($ems-error, $lightness: -10%);
+      background: #dc2626;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
     }
   }
 
