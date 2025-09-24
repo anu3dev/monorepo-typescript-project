@@ -27,6 +27,11 @@ export const Navigation: React.FC = () => {
             </a>
           </li>
           <li className="ems-nav-item">
+            <a href="#blogs" className="ems-nav-link">
+              My blogs
+            </a>
+          </li>
+          <li className="ems-nav-item">
             <a href="#contact" className="ems-nav-link">
               Contact Me
             </a>
