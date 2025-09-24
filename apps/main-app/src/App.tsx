@@ -57,9 +57,11 @@ export default function MainEmployeeApp() {
         { name: 'Site Cat' },
         { name: 'Git' },
         { name: 'JIRA' },
-        { name: 'Netlify' },
         { name: 'VS Code' },
         { name: 'Confluence' },
+        { name: 'Netlify' },
+        { name: 'Render' },
+        { name: 'Neon' },
       ],
     },
   ];
