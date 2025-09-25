@@ -64,7 +64,7 @@ export const Navigation: React.FC = () => {
           <ul className="ems-nav-mobile-list">
             <li className="ems-nav-mobile-item">
               <a
-                href="#about"
+                href="/about"
                 className="ems-nav-mobile-link"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -73,7 +73,16 @@ export const Navigation: React.FC = () => {
             </li>
             <li className="ems-nav-mobile-item">
               <a
-                href="#contact"
+                href="/blog"
+                className="ems-nav-mobile-link"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                My Blogs
+              </a>
+            </li>
+            <li className="ems-nav-mobile-item">
+              <a
+                href="/contact"
                 className="ems-nav-mobile-link"
                 onClick={() => setIsMenuOpen(false)}
               >
