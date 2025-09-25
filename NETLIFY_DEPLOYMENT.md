@@ -22,8 +22,8 @@ Alternative/additional configuration file that provides the same functionality w
 
 ```toml
 [build]
-  publish = "dist"
-  command = "pnpm build"
+  publish = "apps/main-app/dist"
+  command = "cd apps/main-app && pnpm install && pnpm build"
 
 [[redirects]]
   from = "/*"
@@ -43,7 +43,7 @@ Alternative/additional configuration file that provides the same functionality w
 
 ## Deployment Steps
 
-1. **Build the project**:
+1. **Build the project locally (optional test)**:
    ```bash
    cd apps/main-app
    pnpm build
@@ -51,8 +51,10 @@ Alternative/additional configuration file that provides the same functionality w
 
 2. **Deploy to Netlify**:
    - Connect your GitHub repository to Netlify
-   - Set build command: `cd apps/main-app && pnpm build`
-   - Set publish directory: `apps/main-app/dist`
+   - Netlify will automatically use the root `netlify.toml` configuration
+   - **Or manually set in Netlify Dashboard**:
+     - Build command: `cd apps/main-app && pnpm install && pnpm build`
+     - Publish directory: `apps/main-app/dist`
    - Deploy
 
 3. **Verify**:
