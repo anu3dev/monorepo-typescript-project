@@ -22,17 +22,17 @@ export const Navigation: React.FC = () => {
         {/* Desktop Menu */}
         <ul className="ems-nav-menu">
           <li className="ems-nav-item">
-            <a href="#about" className="ems-nav-link">
+            <a href="/about" className="ems-nav-link">
               About Me
             </a>
           </li>
           <li className="ems-nav-item">
-            <a href="#blogs" className="ems-nav-link">
+            <a href="/blog" className="ems-nav-link">
               My blogs
             </a>
           </li>
           <li className="ems-nav-item">
-            <a href="#contact" className="ems-nav-link">
+            <a href="/contact" className="ems-nav-link">
               Contact Me
             </a>
           </li>

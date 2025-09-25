@@ -1,13 +1,13 @@
 import './styles.scss';
 
 import { Navigation, Footer } from '../../../packages/ui/src';
-import WebsiteHome from './components/WebsiteHome/WebsiteHome';
+import AppRoutes from './routes/AppRoutes';
 
 export default function MainEmployeeApp() {
   return (
     <div className="main-employee-app">
       <Navigation />
-      <WebsiteHome />
+      <AppRoutes />
       <Footer />
     </div>
   );

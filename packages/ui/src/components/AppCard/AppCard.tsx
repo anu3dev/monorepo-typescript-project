@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppCardProps } from '../../../../types';
+import { AppCardProps } from '../../../../types/src/types';
 import { Button } from '../Button/Button';
 import { NotificationProvider } from '../Notification/Notification';
 import './AppCard.scss';

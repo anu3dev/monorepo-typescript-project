@@ -1,69 +1,10 @@
 import './styles.scss';
 
 import { TechnicalSkills } from '../../../../../packages/ui/src';
+import { skillsData } from '../../../../../packages/types';
 
 import MoodApp from '../../../../mood-app/src/MoodApp';
 import RegistrationApp from '../../../../registration-app/src/RegistrationApp';
-
-// Technical skills data
-const skillsData = [
-  {
-    title: 'Frontend',
-    skills: [
-      { name: 'React' },
-      { name: 'JavaScript' },
-      { name: 'TypeScript' },
-      { name: 'HTML5' },
-      { name: 'CSS3' },
-      { name: 'Redux' },
-      { name: 'Accessibility (WCAG/a11y)' },
-    ],
-  },
-  {
-    title: 'Build & Tooling',
-    skills: [
-      { name: 'Webpack' },
-      { name: 'Vite' },
-      { name: 'Babel' },
-      { name: 'ESLint' },
-      { name: 'Prettier' },
-      { name: 'NPM' },
-    ],
-  },
-  {
-    title: 'DevOps & CI/CD',
-    skills: [
-      { name: 'Jenkins' },
-      { name: 'SonarQube' },
-      { name: 'Fortify' },
-      { name: 'Black Duck' },
-      { name: 'AEGIS' },
-    ],
-  },
-  {
-    title: 'Backend',
-    skills: [
-      { name: 'Java' },
-      { name: 'Spring Boot' },
-      { name: 'Node.js (Basic)', isLearning: true },
-    ],
-  },
-  {
-    title: 'Tools & Platforms',
-    skills: [
-      { name: 'Splunk' },
-      { name: 'Kibana' },
-      { name: 'Site Cat' },
-      { name: 'Git' },
-      { name: 'JIRA' },
-      { name: 'VS Code' },
-      { name: 'Confluence' },
-      { name: 'Netlify' },
-      { name: 'Render' },
-      { name: 'Neon' },
-    ],
-  },
-];
 
 export default function WebsiteHome() {
   return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ROUTES } from './commons';
 
 export type Employee = {
   id: string;
@@ -32,3 +33,6 @@ export interface AppCardProps
     port: number;
   };
 }
+
+export type RouteKeys = keyof typeof ROUTES;
+export type RoutePaths = (typeof ROUTES)[RouteKeys];
