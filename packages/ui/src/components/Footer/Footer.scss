@@ -19,8 +19,8 @@
 
 .ems-footer-container {
   max-width: $ems-container-max-width;
-  margin: 0 auto;
-  padding: $ems-spacing-xl $ems-spacing-md $ems-spacing-lg;
+  margin: $ems-main-spacing-0 auto;
+  padding: $ems-main-spacing-8 $ems-main-spacing-6 $ems-main-spacing-6;
 
   @media (max-width: $ems-breakpoint-mobile) {
     padding: $ems-spacing-lg $ems-spacing-md;

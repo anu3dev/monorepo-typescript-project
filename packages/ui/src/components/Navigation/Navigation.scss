@@ -14,8 +14,8 @@
 
 .ems-nav-container {
   max-width: $ems-container-max-width;
-  margin: 0 auto;
-  padding: 0 $ems-spacing-md;
+  margin: $ems-main-spacing-0 auto;
+  padding: $ems-main-spacing-0 $ems-main-spacing-6;
   display: flex;
   align-items: center;
   justify-content: space-between;

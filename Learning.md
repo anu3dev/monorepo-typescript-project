@@ -4,8 +4,7 @@
 - document.documentElement.scrollHeight -> page total height including scroll.
 - document.documentElement.scrollTop -> page scroll position from top.
 - do something on scroll
----
- window.addEventListener('scroll', () => {
-    console.log('scroll happened)
- })
----
+```js
+window.addEventListener("scroll", () => {
+  console.log("User scrolled the page!");
+});
