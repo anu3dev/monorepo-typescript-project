@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Navigation.scss';
 
 export const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -57,7 +56,6 @@ export const Navigation: React.FC = () => {
           <span className="ems-nav-toggle-line"></span>
         </button>
       </div>
-
       {/* Mobile Menu - Outside container to avoid scroll issues */}
       {isMenuOpen && (
         <div className="ems-nav-mobile-menu">

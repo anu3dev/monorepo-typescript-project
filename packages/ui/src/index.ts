@@ -6,4 +6,4 @@ export { Navigation } from './components/Navigation/Navigation';
 export { Footer } from './components/Footer/Footer';
 export { TechnicalSkills } from './components/TechnicalSkills/TechnicalSkills';
 export { ComingSoon } from './components/ComingSoon/ComingSoon';
-export type { ComingSoonProps } from './components/ComingSoon/ComingSoon';
+export { ProgressIndicator } from './components/ProgressIndicator/ProgressIndicator';

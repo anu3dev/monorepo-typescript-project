@@ -4,8 +4,10 @@
     "paths": {
       "@ems/ui": ["packages/ui/src"],
       "@ems/api": ["packages/api/src"],
-      "@ems/types": ["packages/types/src"],
-      "@ems/design-tokens": ["packages/designTokens/src"]
+      "@ems/type": ["packages/type/src"],
+      "@ems/design-token": ["packages/designToken/src"],
+      "@ems/hook": ["packages/hook/src"],
+      "@ems/constant": ["packages/constant/src"]
     },
     "jsx": "react-jsx",
     "moduleResolution": "bundler",

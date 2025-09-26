@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import type { NotifyPayload } from './notify';
+import type { NotifyPayload } from '@ems/type';
 
 export const NotificationProvider: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
   const [msg, setMsg] = useState<NotifyPayload | null>(null);
+
   useEffect(() => {
     const h = (e: Event) => {
       setMsg((e as CustomEvent).detail as NotifyPayload);
@@ -13,6 +14,7 @@ export const NotificationProvider: React.FC<{ children?: React.ReactNode }> = ({
     window.addEventListener('ems:notify', h as EventListener);
     return () => window.removeEventListener('ems:notify', h as EventListener);
   }, []);
+
   return (
     <>
       {children}

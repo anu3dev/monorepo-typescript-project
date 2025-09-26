@@ -1,8 +1,7 @@
 import React from 'react';
-import { AppCardProps } from '../../../../types/src/types';
-import { Button } from '../Button/Button';
-import { NotificationProvider } from '../Notification/Notification';
-import './AppCard.scss';
+import { AppCardProps } from '@ems/type';
+import { Button } from '@ems/ui';
+import { NotificationProvider } from '@ems/ui';
 
 export const AppCard: React.FC<AppCardProps> = ({
   heading,

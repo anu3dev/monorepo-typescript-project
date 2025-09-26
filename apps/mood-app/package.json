@@ -13,6 +13,6 @@
     "react-dom": "^18.2.0",
     "@ems/ui": "workspace:*",
     "@ems/api": "workspace:*",
-    "@ems/types": "workspace:*"
+    "@ems/type": "workspace:*"
   }
 }

@@ -1,5 +1,5 @@
 import { AppCard, notify } from '@ems/ui';
-import { RegistrationAppProps } from '@ems/types';
+import { RegistrationAppProps } from '@ems/type';
 
 export default function RegistrationApp({
   isStandAlone,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ROUTES } from '../../../../packages/types/src';
+import { ROUTES } from '../../../../packages/constant/src';
 
 import WebsiteHome from '../components/WebsiteHome/WebsiteHome';
 import MyBlogs from '../components/MyBlogs/MyBlogs';

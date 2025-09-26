@@ -81,9 +81,9 @@ importers:
       '@ems/api':
         specifier: workspace:*
         version: link:../../packages/api
-      '@ems/types':
+      '@ems/type':
         specifier: workspace:*
-        version: link:../../packages/types
+        version: link:../../packages/type
       '@ems/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -102,9 +102,9 @@ importers:
       '@ems/api':
         specifier: workspace:*
         version: link:../../packages/api
-      '@ems/types':
+      '@ems/type':
         specifier: workspace:*
-        version: link:../../packages/types
+        version: link:../../packages/type
       '@ems/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -120,9 +120,9 @@ importers:
       '@ems/api':
         specifier: workspace:*
         version: link:../../packages/api
-      '@ems/types':
+      '@ems/type':
         specifier: workspace:*
-        version: link:../../packages/types
+        version: link:../../packages/type
       '@ems/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -135,13 +135,17 @@ importers:
 
   packages/api: {}
 
-  packages/designTokens:
+  packages/constant: {}
+
+  packages/designToken:
     devDependencies:
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
 
-  packages/types: {}
+  packages/hook: {}
+
+  packages/type: {}
 
   packages/ui:
     dependencies:

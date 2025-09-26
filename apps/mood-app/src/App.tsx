@@ -1,4 +1,4 @@
-import { AppProps } from '@ems/types';
+import { AppProps } from '@ems/type';
 import MoodApp from './MoodApp';
 
 export default function App({ isStandAlone }: AppProps) {

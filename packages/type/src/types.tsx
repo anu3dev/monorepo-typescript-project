@@ -1,5 +1,5 @@
 import React from 'react';
-import { ROUTES } from './commons';
+import { ROUTES } from '@ems/constant';
 
 export type Employee = {
   id: string;
@@ -36,3 +36,29 @@ export interface AppCardProps
 
 export type RouteKeys = keyof typeof ROUTES;
 export type RoutePaths = (typeof ROUTES)[RouteKeys];
+
+export interface ComingSoonProps {
+  title?: string;
+  message?: string;
+  estimatedDate?: string;
+  showAnimation?: boolean;
+}
+
+interface SkillItem {
+  name: string;
+  isLearning?: boolean;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: SkillItem[];
+}
+
+export interface TechnicalSkillsProps {
+  categories: SkillCategory[];
+}
+
+export interface NotifyPayload {
+  type: 'success' | 'error' | 'info';
+  message: string;
+}

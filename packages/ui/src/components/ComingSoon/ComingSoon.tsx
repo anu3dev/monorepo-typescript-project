@@ -1,12 +1,5 @@
 import React from 'react';
-import './ComingSoon.scss';
-
-export interface ComingSoonProps {
-  title?: string;
-  message?: string;
-  estimatedDate?: string;
-  showAnimation?: boolean;
-}
+import { ComingSoonProps } from '@ems/type';
 
 export const ComingSoon: React.FC<ComingSoonProps> = ({
   title = 'Coming Soon',

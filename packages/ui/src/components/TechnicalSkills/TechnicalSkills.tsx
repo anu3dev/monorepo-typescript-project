@@ -1,19 +1,5 @@
 import React from 'react';
-import './TechnicalSkills.scss';
-
-interface SkillItem {
-  name: string;
-  isLearning?: boolean;
-}
-
-interface SkillCategory {
-  title: string;
-  skills: SkillItem[];
-}
-
-interface TechnicalSkillsProps {
-  categories: SkillCategory[];
-}
+import { TechnicalSkillsProps } from '@ems/type';
 
 export const TechnicalSkills: React.FC<TechnicalSkillsProps> = ({
   categories,

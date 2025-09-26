@@ -1,4 +1,4 @@
-import { ComingSoon } from 'packages/ui/src/components/ComingSoon/ComingSoon';
+import { ComingSoon } from '@ems/ui';
 
 export default function ContactMe() {
   return <ComingSoon />;

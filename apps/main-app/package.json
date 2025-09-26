@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@ems/api": "workspace:*",
-    "@ems/types": "workspace:*",
+    "@ems/type": "workspace:*",
     "@ems/ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

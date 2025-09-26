@@ -1,0 +1,10 @@
+@use '../../../../designToken/src/_variablesDefault' as *;
+
+.progress-indicator {
+  height: $ems-spacing-sm;
+  background-color: $ems-main-color-primary;
+  margin: $ems-main-spacing-16 $ems-main-spacing-0 $ems-main-spacing-0 $ems-main-spacing-0;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1;
+}

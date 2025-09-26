@@ -1,5 +1,5 @@
 import { AppCard, notify } from '@ems/ui';
-import { MoodAppProps } from '@ems/types';
+import { MoodAppProps } from '@ems/type';
 
 export default function MoodApp({ isStandAlone }: MoodAppProps) {
   const save = async () => {

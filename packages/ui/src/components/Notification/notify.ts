@@ -1,7 +1,4 @@
-export interface NotifyPayload {
-  type: 'success' | 'error' | 'info';
-  message: string;
-}
+import { NotifyPayload } from '@ems/type';
 
 export function notify(type: NotifyPayload['type'] = 'info', message: string) {
   window.dispatchEvent(
