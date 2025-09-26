@@ -1,4 +1,4 @@
-### JavaScript
+### JavaScript - website scroll indicator
 
 - document.documentElement.clientHeight -> visible page height.
 - document.documentElement.scrollHeight -> page total height including scroll.

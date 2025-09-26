@@ -52,7 +52,7 @@ export default function WebsiteHome() {
                   workflow.
                 </p>
                 <button className="ems-button" disabled>
-                  Coming Soon
+                  Coming soon!
                 </button>
               </div>
             </div>

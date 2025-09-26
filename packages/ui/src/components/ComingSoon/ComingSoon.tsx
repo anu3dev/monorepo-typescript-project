@@ -2,7 +2,7 @@ import React from 'react';
 import { ComingSoonProps } from '@ems/type';
 
 export const ComingSoon: React.FC<ComingSoonProps> = ({
-  title = 'Coming Soon',
+  title = 'Coming soon!',
   message = "We're working hard to bring you something amazing. Stay tuned!",
   estimatedDate,
   showAnimation = true,
