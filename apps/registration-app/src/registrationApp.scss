@@ -1,6 +1,6 @@
 // Registration App Styles - UI components with custom properties
-@use '../../../packages/designTokens/src/_variablesDefault' as *;
-@use '../../../packages/ui/src/styles.scss';
+@use '../../../packages/designToken/src/_variablesDefault' as *;
+@use '../../../packages/ui/src/ui.scss';
 
 // Standalone app container - left aligned and mobile responsive
 .registration-standalone-container {

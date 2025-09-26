@@ -1,6 +1,8 @@
 // Main App Styles - UI components with custom properties
 @use '../../../packages/designToken/src/_variablesDefault' as *;
-@use '../../../packages/ui/src/styles.scss';
+@use '../../../packages/ui/src/ui.scss';
+
+@use './components/WebsiteHome/WebsiteHome.scss';
 
 // Global responsive fixes
 * {

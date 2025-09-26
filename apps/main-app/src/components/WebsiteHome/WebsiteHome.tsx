@@ -1,7 +1,5 @@
-import './styles.scss';
-
-import { TechnicalSkills } from '../../../../../packages/ui/src';
-import { skillsData } from '../../../../../packages/constant';
+import { TechnicalSkills } from '@ems/ui';
+import { skillsData } from '@ems/constant';
 
 import MoodApp from '../../../../mood-app/src/MoodApp';
 import RegistrationApp from '../../../../registration-app/src/RegistrationApp';

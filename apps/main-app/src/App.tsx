@@ -1,9 +1,5 @@
-import './styles.scss';
-import {
-  Navigation,
-  Footer,
-  ProgressIndicator,
-} from '../../../packages/ui/src';
+import { Navigation, Footer, ProgressIndicator } from '@ems/ui';
+
 import AppRoutes from './routes/AppRoutes';
 
 export default function MainEmployeeApp() {
