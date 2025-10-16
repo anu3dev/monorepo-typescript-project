@@ -14,7 +14,7 @@ export const Navigation: React.FC = () => {
         <div className="ems-nav-brand">
           <a href="/" className="ems-nav-logo">
             <span className="ems-nav-logo-icon">⚡</span>
-            <span className="ems-nav-logo-text">E2E Online</span>
+            <span className="ems-nav-logo-text">Anurag</span>
           </a>
         </div>
 

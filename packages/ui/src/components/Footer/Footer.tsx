@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
       <div className="ems-footer-container">
         <div className="ems-footer-content">
           <div className="ems-footer-brand">
-            <h3 className="ems-footer-title">E2E Online</h3>
+            <h3 className="ems-footer-title">Anurag</h3>
             <p className="ems-footer-tagline">
               Building innovative tools for productivity and learning
             </p>
