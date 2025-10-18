@@ -64,4 +64,5 @@ export const ROUTES = {
   ABOUT: '/about',
   BLOG: '/blog',
   CONTACT: '/contact',
+  MOOD_TRACKER: '/mood-tracker',
 } as const;

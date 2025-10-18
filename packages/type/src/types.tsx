@@ -17,7 +17,7 @@ export type RegistrationAppProps = {
 };
 
 export type MoodAppProps = {
-  isStandAlone?: boolean;
+  isStandAlone?: boolean | false;
 };
 
 export interface AppCardProps

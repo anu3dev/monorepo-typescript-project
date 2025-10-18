@@ -1,21 +1,14 @@
-import { AppCard } from '@ems/ui';
 import { MoodAppProps } from '@ems/type';
 
-export default function MoodApp({ isStandAlone }: MoodAppProps) {
-  const handleButtonClick = async () => {};
+import './moodApp.scss';
+import { ComingSoon } from '@ems/ui';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function MoodApp({ isStandAlone }: MoodAppProps) {
   return (
-    <AppCard
-      heading="🎭 Mood Tracker"
-      subHeading="Employee Mood"
-      handleButtonClick={handleButtonClick}
-      buttonText="Coming soon!"
-      isStandAlone={isStandAlone}
-      standaloneInfo={{
-        appName: 'Mood App',
-        command: 'npm run start:mood',
-        port: 5174,
-      }}
-    />
+    <div className="mood-container">
+      {/* <div className="mood-container__app">Hello {`${isStandAlone}`}</div> */}
+      <ComingSoon />
+    </div>
   );
 }

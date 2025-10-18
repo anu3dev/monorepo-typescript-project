@@ -1,10 +1,14 @@
 import { TechnicalSkills } from '@ems/ui';
-import { skillsData } from '@ems/constant';
+import { ROUTES, skillsData } from '@ems/constant';
+import { AppCard } from '@ems/ui';
 
-import MoodApp from '../../../../mood-app/src/MoodApp';
 import RegistrationApp from '../../../../registration-app/src/RegistrationApp';
 
 export default function WebsiteHome() {
+  const handleButtonClick = async () => {
+    window.location.href = ROUTES.MOOD_TRACKER;
+  };
+
   return (
     <main className="main-employee-app-container">
       <h1 className="main-employee-app-title">🚀 Code. Create. Conquer.</h1>
@@ -39,7 +43,18 @@ export default function WebsiteHome() {
         <h2>🚀 Available Tools</h2>
         <p>Start exploring with our current applications:</p>
         <div className="main-employee-app-content">
-          <MoodApp />
+          <AppCard
+            heading="🎭 Mood Tracker"
+            subHeading="How is your mood today!"
+            handleButtonClick={handleButtonClick}
+            buttonText="Try now!"
+            isStandAlone={false}
+            standaloneInfo={{
+              appName: 'Mood App',
+              command: 'npm run start:mood',
+              port: 5174,
+            }}
+          />
           <RegistrationApp />
           <div className="ems-app-card-container">
             <div className="ems-app-card">
