@@ -1,5 +1,9 @@
-import { ComingSoon } from '@ems/ui';
+import { ComingSoon, PageLayoutA } from '@ems/ui';
 
 export default function ContactMe() {
-  return <ComingSoon />;
+  return (
+    <PageLayoutA>
+      <ComingSoon />
+    </PageLayoutA>
+  );
 }

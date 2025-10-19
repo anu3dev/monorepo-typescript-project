@@ -3,9 +3,10 @@
 @use '../../../packages/ui/src/ui.scss';
 
 // Standalone app container - left aligned and mobile responsive
-.registration-standalone-container {
-  padding: $ems-spacing-lg;
+.registration-container {
   min-height: 100vh;
+  //margin: $ems-main-spacing-20 auto 0 auto;
+  //padding: $ems-spacing-lg;
 
   @media (max-width: $ems-breakpoint-mobile) {
     padding: $ems-spacing-md;

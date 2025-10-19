@@ -1,12 +1,11 @@
 import { TechnicalSkills } from '@ems/ui';
 import { ROUTES, skillsData } from '@ems/constant';
 import { AppCard } from '@ems/ui';
-
-import RegistrationApp from '../../../../registration-app/src/RegistrationApp';
+import { BoxLayoutA } from '@ems/ui';
 
 export default function WebsiteHome() {
-  const handleButtonClick = async () => {
-    window.location.href = ROUTES.MOOD_TRACKER;
+  const handleButtonClick = async (url: string): Promise<void> => {
+    window.location.href = url;
   };
 
   return (
@@ -43,35 +42,49 @@ export default function WebsiteHome() {
         <h2>🚀 Available Tools</h2>
         <p>Start exploring with our current applications:</p>
         <div className="main-employee-app-content">
-          <AppCard
-            heading="🎭 Mood Tracker"
-            subHeading="How is your mood today!"
-            handleButtonClick={handleButtonClick}
-            buttonText="Try now!"
-            isStandAlone={false}
-            standaloneInfo={{
-              appName: 'Mood App',
-              command: 'npm run start:mood',
-              port: 5174,
-            }}
-          />
-          <RegistrationApp />
-          <div className="ems-app-card-container">
-            <div className="ems-app-card">
-              <div className="ems-app-card-header">
-                <h2 className="ems-app-card-title">🛠️ More Tools</h2>
-              </div>
-              <div className="ems-app-card-content">
-                <p>
-                  Additional productivity tools coming soon to enhance your
-                  workflow.
-                </p>
-                <button className="ems-button" disabled>
-                  Coming soon!
-                </button>
-              </div>
-            </div>
-          </div>
+          <BoxLayoutA>
+            <AppCard
+              heading="🎭 Mood Tracker"
+              subHeading="How is your mood today!"
+              handleButtonClick={() => handleButtonClick(ROUTES.MOOD_TRACKER)}
+              buttonText="Try now!"
+              isStandAlone={false}
+              standaloneInfo={{
+                appName: 'Mood App',
+                command: 'npm run start:mood',
+                port: 5174,
+              }}
+            />
+          </BoxLayoutA>
+          <BoxLayoutA>
+            <AppCard
+              heading="📋 Registration"
+              subHeading="Employee Registration"
+              handleButtonClick={() =>
+                handleButtonClick(ROUTES.REGISTRATION_APP)
+              }
+              buttonText="Coming soon!"
+              standaloneInfo={{
+                appName: 'Registration App',
+                command: 'npm run start:registration',
+                port: 5175,
+              }}
+            />
+          </BoxLayoutA>
+          <BoxLayoutA>
+            <AppCard
+              heading=" 🛠️ More Tools"
+              subHeading="Additional productivity tools coming soon to enhance your
+                  workflow."
+              handleButtonClick={() => {}}
+              buttonText="Coming soon!"
+              standaloneInfo={{
+                appName: 'More Tools',
+                command: 'in progress',
+                port: 0,
+              }}
+            />
+          </BoxLayoutA>
         </div>
       </div>
 

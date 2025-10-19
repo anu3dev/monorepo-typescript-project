@@ -8,6 +8,7 @@ import ContactMe from '../components/ContactMe/ContactMe';
 import AboutMe from '../components/AboutMe/AboutMe';
 
 import MoodApp from 'apps/mood-app/src/MoodApp';
+import RegistrationApp from 'apps/registration-app/src/RegistrationApp';
 
 const AppRoutes: React.FC = () => {
   return (
@@ -20,6 +21,10 @@ const AppRoutes: React.FC = () => {
         <Route
           path={ROUTES.MOOD_TRACKER}
           element={<MoodApp isStandAlone={false} />}
+        />
+        <Route
+          path={ROUTES.REGISTRATION_APP}
+          element={<RegistrationApp isStandAlone={false} />}
         />
       </Routes>
     </Router>

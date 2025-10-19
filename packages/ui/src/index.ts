@@ -5,3 +5,5 @@ export { Footer } from './components/Footer/Footer';
 export { TechnicalSkills } from './components/TechnicalSkills/TechnicalSkills';
 export { ComingSoon } from './components/ComingSoon/ComingSoon';
 export { ProgressIndicator } from './components/ProgressIndicator/ProgressIndicator';
+export { BoxLayoutA } from './components/BoxLayoutA/BoxLayoutA';
+export { PageLayoutA } from './components/PageLayoutA/PageLayoutA';

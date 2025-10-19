@@ -11,7 +11,7 @@ export const AppCard: React.FC<AppCardProps> = ({
   standaloneInfo,
 }) => {
   return (
-    <div className="ems-app-card-container">
+    <>
       <h2 className="ems-app-card-header">{heading}</h2>
       <div className="ems-app-card-content">
         <h3>{subHeading}</h3>
@@ -26,6 +26,6 @@ export const AppCard: React.FC<AppCardProps> = ({
           <span className="port-info">:{standaloneInfo.port}</span>
         </div>
       )}
-    </div>
+    </>
   );
 };

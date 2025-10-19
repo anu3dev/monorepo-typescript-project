@@ -2,23 +2,13 @@
 @use '../../../../designToken/src/_variablesDefault' as *;
 
 .ems-coming-soon {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-  padding: 6rem 0 2rem 0;
-  font-family: $ems-font-family;
-
-  &__container {
-    max-width: 600px;
-    text-align: center;
-    background: white;
-    padding: $ems-spacing-xl;
-    border-radius: $ems-radius-lg;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 1px solid $ems-border-color;
-  }
+  max-width: 600px;
+  text-align: center;
+  background: white;
+  padding: $ems-spacing-xl;
+  border-radius: $ems-radius-lg;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid $ems-border-color;
 
   &__animation {
     margin-bottom: $ems-spacing-lg;
@@ -169,19 +159,4 @@
 @keyframes progress {
   0% { width: 60%; }
   100% { width: 70%; }
-}
-
-// Mobile responsive adjustments
-@media (max-width: 640px) {
-  .ems-coming-soon {
-    padding: 5rem 1rem 1rem 1rem;
-    
-    &__container {
-      padding: $ems-spacing-lg;
-    }
-    
-    &__rocket {
-      font-size: 3rem;
-    }
-  }
 }

@@ -1,23 +1,16 @@
-import { AppCard } from '@ems/ui';
+import { ComingSoon, PageLayoutA } from '@ems/ui';
+import './registrationApp.scss';
 import { RegistrationAppProps } from '@ems/type';
 
 export default function RegistrationApp({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isStandAlone,
 }: RegistrationAppProps) {
-  const handleButtonClick = async () => {};
-
   return (
-    <AppCard
-      heading="📋 Registration"
-      subHeading="Employee Registration"
-      handleButtonClick={handleButtonClick}
-      buttonText="Coming soon!"
-      isStandAlone={isStandAlone}
-      standaloneInfo={{
-        appName: 'Registration App',
-        command: 'npm run start:registration',
-        port: 5175,
-      }}
-    />
+    <div className="registration-container">
+      <PageLayoutA>
+        <ComingSoon />
+      </PageLayoutA>
+    </div>
   );
 }

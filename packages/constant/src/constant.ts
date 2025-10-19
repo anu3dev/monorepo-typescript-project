@@ -65,4 +65,5 @@ export const ROUTES = {
   BLOG: '/blog',
   CONTACT: '/contact',
   MOOD_TRACKER: '/mood-tracker',
+  REGISTRATION_APP: '/registration-app',
 } as const;
