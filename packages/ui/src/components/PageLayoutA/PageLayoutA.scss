@@ -7,14 +7,12 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
-  padding: 6rem 0 2rem 0;
   font-family: $ems-font-family;
 }
 
 // Mobile responsive adjustments
 @media (max-width: 640px) {
   .ems-page-layout-a {
-    padding: 5rem 1rem 1rem 1rem;
     
     &__container {
       padding: $ems-spacing-lg;

@@ -42,6 +42,7 @@ export interface ComingSoonProps {
   message?: string;
   estimatedDate?: string;
   showAnimation?: boolean;
+  isStandAlone?: boolean;
 }
 
 interface SkillItem {

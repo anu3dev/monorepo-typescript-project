@@ -1,15 +1,14 @@
-import { ComingSoon, PageLayoutA } from '@ems/ui';
-import './registrationApp.scss';
 import { RegistrationAppProps } from '@ems/type';
 
+import { ComingSoon, PageLayoutA } from '@ems/ui';
+
 export default function RegistrationApp({
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   isStandAlone,
 }: RegistrationAppProps) {
   return (
     <div className="registration-container">
       <PageLayoutA>
-        <ComingSoon />
+        <ComingSoon isStandAlone={isStandAlone} />
       </PageLayoutA>
     </div>
   );

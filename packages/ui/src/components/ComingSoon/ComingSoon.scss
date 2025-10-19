@@ -10,6 +10,14 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border: 1px solid $ems-border-color;
 
+  &__standalone {
+    margin: $ems-main-spacing-4 $ems-main-spacing-4;
+  }
+
+    &__main-app {
+    margin: $ems-main-spacing-20 $ems-main-spacing-4 $ems-main-spacing-4;
+  }
+
   &__animation {
     margin-bottom: $ems-spacing-lg;
     animation: float 3s ease-in-out infinite;
