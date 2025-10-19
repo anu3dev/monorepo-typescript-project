@@ -6,12 +6,9 @@ export const ComingSoon: React.FC<ComingSoonProps> = ({
   message = "We're working hard to bring you something amazing. Stay tuned!",
   estimatedDate,
   showAnimation = true,
-  isStandAlone = false,
 }) => {
   return (
-    <div
-      className={`ems-coming-soon ${isStandAlone ? 'ems-coming-soon__standalone' : 'ems-coming-soon__main-app'}`}
-    >
+    <div className="ems-coming-soon">
       {showAnimation && (
         <div className="ems-coming-soon__animation">
           <div className="ems-coming-soon__rocket">🚀</div>

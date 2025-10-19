@@ -44,6 +44,21 @@ export default function WebsiteHome() {
         <div className="main-employee-app-content">
           <BoxLayoutA>
             <AppCard
+              heading="📋 Registration"
+              subHeading="Employee Registration"
+              handleButtonClick={() =>
+                handleButtonClick(ROUTES.REGISTRATION_APP)
+              }
+              buttonText="Try now!"
+              standaloneInfo={{
+                appName: 'Registration App',
+                command: 'npm run start:registration',
+                port: 5175,
+              }}
+            />
+          </BoxLayoutA>
+          <BoxLayoutA>
+            <AppCard
               heading="🎭 Mood Tracker"
               subHeading="How is your mood today!"
               handleButtonClick={() => handleButtonClick(ROUTES.MOOD_TRACKER)}
@@ -53,21 +68,6 @@ export default function WebsiteHome() {
                 appName: 'Mood App',
                 command: 'npm run start:mood',
                 port: 5174,
-              }}
-            />
-          </BoxLayoutA>
-          <BoxLayoutA>
-            <AppCard
-              heading="📋 Registration"
-              subHeading="Employee Registration"
-              handleButtonClick={() =>
-                handleButtonClick(ROUTES.REGISTRATION_APP)
-              }
-              buttonText="Coming soon!"
-              standaloneInfo={{
-                appName: 'Registration App',
-                command: 'npm run start:registration',
-                port: 5175,
               }}
             />
           </BoxLayoutA>

@@ -42,7 +42,6 @@ export interface ComingSoonProps {
   message?: string;
   estimatedDate?: string;
   showAnimation?: boolean;
-  isStandAlone?: boolean;
 }
 
 interface SkillItem {
@@ -63,3 +62,7 @@ export interface NotifyPayload {
   type: 'success' | 'error' | 'info';
   message: string;
 }
+
+export type PageLayoutAProps = React.PropsWithChildren<{
+  isStandAlone?: boolean;
+}>;

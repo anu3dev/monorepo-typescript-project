@@ -8,6 +8,24 @@
   justify-content: center;
   background: var(--ems-page-background-color, $ems-page-background-color);
   font-family: $ems-font-family;
+
+  &__box {
+    max-width: 600px;
+    text-align: center;
+    background: white;
+    border-radius: $ems-radius-lg;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid $ems-border-color;
+    padding: $ems-spacing-xl;
+
+    &__standalone {
+      margin: $ems-main-spacing-4 $ems-main-spacing-4;
+    }
+
+    &__main-app {
+      margin: $ems-main-spacing-20 $ems-main-spacing-4 $ems-main-spacing-4;
+    }
+  }
 }
 
 // Mobile responsive adjustments
