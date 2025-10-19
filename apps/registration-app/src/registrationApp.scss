@@ -1,6 +1,10 @@
 @use '../../../packages/designToken/src/_variablesDefault' as *;
 @use '../../../packages/ui/src/ui.scss';
 
+:root {
+--ems-page-background-color: #fffbeb;
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -3,8 +3,6 @@
 
 .ems-box-layout-a-container {
   flex: 1;
-  max-width: $ems-card-max-width;
-  min-width: $ems-card-min-width;
   width: auto;
   border: 2px solid var(--ems-border, $ems-border);
   border-radius: $ems-radius-lg;
