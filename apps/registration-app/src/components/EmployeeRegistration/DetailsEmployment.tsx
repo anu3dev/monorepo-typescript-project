@@ -1,4 +1,5 @@
 import React from 'react';
+import { EmployeeRegistrationFormInputField } from './EmployeeRegistrationFormInputField';
 
 type DetailsEmploymentProps = {
   formDetails: {
@@ -15,28 +16,16 @@ export const DetailsEmployment = ({
 }: DetailsEmploymentProps) => {
   return (
     <div className="details-employment">
-      <div
-        className={`employee-registration__input ${pageHasError && !formDetails?.location ? 'employee-registration__input-error' : ''}`}
-      >
-        <span>Job location:</span>
-        <input
-          type="text"
-          name="location"
-          value={formDetails?.location}
-          onChange={handleFormValue}
-        />
-      </div>
-      <div
-        className={`employee-registration__input ${pageHasError && !formDetails?.company ? 'employee-registration__input-error' : ''}`}
-      >
-        <span>Company name:</span>
-        <input
-          type="text"
-          name="company"
-          value={formDetails?.company}
-          onChange={handleFormValue}
-        />
-      </div>
+      <EmployeeRegistrationFormInputField
+        pageHasError={pageHasError || false}
+        fieldName={formDetails.location || ''}
+        handleFormValue={handleFormValue}
+      />
+      <EmployeeRegistrationFormInputField
+        pageHasError={pageHasError || false}
+        fieldName={formDetails.company || ''}
+        handleFormValue={handleFormValue}
+      />
     </div>
   );
 };

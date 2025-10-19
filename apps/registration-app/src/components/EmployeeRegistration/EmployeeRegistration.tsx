@@ -123,11 +123,6 @@ export const EmployeeRegistration = () => {
           pageHasError={pageHasError}
         />
       ) : null}
-      {pageHasError && (
-        <span className="employee-registration__error">
-          Please fix the error first
-        </span>
-      )}
       <div className="employee-registration__btn">
         <button
           type="button"

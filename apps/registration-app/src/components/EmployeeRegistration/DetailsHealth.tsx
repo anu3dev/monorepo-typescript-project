@@ -1,4 +1,5 @@
 import React from 'react';
+import { EmployeeRegistrationFormInputField } from './EmployeeRegistrationFormInputField';
 
 type DetailsHealthProps = {
   formDetails: {
@@ -16,28 +17,16 @@ export const DetailsHealth = ({
 }: DetailsHealthProps) => {
   return (
     <div className="details-health">
-      <div
-        className={`employee-registration__input ${pageHasError && !formDetails?.insuranceProvider ? 'employee-registration__input-error' : ''}`}
-      >
-        <span>Your insurance provider:</span>
-        <input
-          type="text"
-          name="insuranceProvider"
-          value={formDetails?.insuranceProvider}
-          onChange={handleFormValue}
-        />
-      </div>
-      <div
-        className={`employee-registration__input ${pageHasError && !formDetails?.bloodgroup ? 'employee-registration__input-error' : ''}`}
-      >
-        <span>Blood group:</span>
-        <input
-          type="text"
-          name="bloodgroup"
-          value={formDetails?.bloodgroup}
-          onChange={handleFormValue}
-        />
-      </div>
+      <EmployeeRegistrationFormInputField
+        pageHasError={pageHasError || false}
+        fieldName={formDetails.insuranceProvider || ''}
+        handleFormValue={handleFormValue}
+      />
+      <EmployeeRegistrationFormInputField
+        pageHasError={pageHasError || false}
+        fieldName={formDetails.bloodgroup || ''}
+        handleFormValue={handleFormValue}
+      />
     </div>
   );
 };

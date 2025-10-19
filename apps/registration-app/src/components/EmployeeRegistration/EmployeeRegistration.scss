@@ -6,7 +6,7 @@
         flex-direction: column;
         margin: $ems-main-spacing-2 $ems-main-spacing-0;
 
-        span {
+        &__label {
             text-align: left;
         }
 
@@ -60,7 +60,6 @@
     &__error {
         text-align: left;
         color: red;
-        font-size: $ems-main-spacing-3;
-        font-weight: bold;
+        font-size: $ems-main-spacing-4;
     }
 }
