@@ -21,12 +21,14 @@ export const DetailsEmployment = ({
         fieldName={formDetails.location || ''}
         handleFormValue={handleFormValue}
         inputFieldName="location"
+        inputLabelName="Job location:"
       />
       <EmployeeRegistrationFormInputField
         pageHasError={pageHasError || false}
         fieldName={formDetails.company || ''}
         handleFormValue={handleFormValue}
         inputFieldName="company"
+        inputLabelName="Company name:"
       />
     </div>
   );
