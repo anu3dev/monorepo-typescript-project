@@ -6,15 +6,19 @@ type DetailsHealthProps = {
     bloodgroup?: string;
   };
   handleFormValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  pageHasError: boolean | false;
 };
 
 export const DetailsHealth = ({
   formDetails,
   handleFormValue,
+  pageHasError,
 }: DetailsHealthProps) => {
   return (
     <div className="details-health">
-      <div className="employee-registration__input">
+      <div
+        className={`employee-registration__input ${pageHasError && !formDetails?.insuranceProvider ? 'employee-registration__input-error' : ''}`}
+      >
         <span>Your insurance provider:</span>
         <input
           type="text"
@@ -23,7 +27,9 @@ export const DetailsHealth = ({
           onChange={handleFormValue}
         />
       </div>
-      <div className="employee-registration__input">
+      <div
+        className={`employee-registration__input ${pageHasError && !formDetails?.bloodgroup ? 'employee-registration__input-error' : ''}`}
+      >
         <span>Blood group:</span>
         <input
           type="text"

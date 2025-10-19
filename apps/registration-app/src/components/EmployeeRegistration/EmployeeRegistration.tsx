@@ -120,12 +120,13 @@ export const EmployeeRegistration = () => {
         <ActiveTab
           formDetails={formDetails}
           handleFormValue={handleFormValue}
+          pageHasError={pageHasError}
         />
       ) : null}
       {pageHasError && (
-        <div className="employee-registration__error">
+        <span className="employee-registration__error">
           Please fix the error first
-        </div>
+        </span>
       )}
       <div className="employee-registration__btn">
         <button

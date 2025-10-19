@@ -17,6 +17,12 @@
         }
     }
 
+    &__input-error {
+        input {
+            border: 1px solid red;
+        }
+    }
+
     &__tab{
         display: flex;
         justify-content: space-between;
