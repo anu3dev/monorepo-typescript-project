@@ -21,11 +21,13 @@ export const DetailsHealth = ({
         pageHasError={pageHasError || false}
         fieldName={formDetails.insuranceProvider || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="insuranceProvider"
       />
       <EmployeeRegistrationFormInputField
         pageHasError={pageHasError || false}
         fieldName={formDetails.bloodgroup || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="bloodgroup"
       />
     </div>
   );

@@ -4,12 +4,14 @@ type EmployeeRegistrationFormInputFieldProps = {
   pageHasError: boolean;
   fieldName: string;
   handleFormValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  inputFieldName: string;
 };
 
 export const EmployeeRegistrationFormInputField = ({
   pageHasError,
   fieldName,
   handleFormValue,
+  inputFieldName,
 }: EmployeeRegistrationFormInputFieldProps) => {
   return (
     <div
@@ -25,7 +27,7 @@ export const EmployeeRegistrationFormInputField = ({
       </div>
       <input
         type="text"
-        name="name"
+        name={inputFieldName}
         value={fieldName}
         onChange={handleFormValue}
       />

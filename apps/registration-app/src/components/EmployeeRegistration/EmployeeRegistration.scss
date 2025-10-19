@@ -35,10 +35,13 @@
         &__button {
             padding: $ems-main-spacing-2 $ems-main-spacing-4;
             font-size: $ems-main-spacing-4;
+            border: none;
+            border-radius: .5rem;
         }
 
         &__button:hover {
             cursor: pointer;
+            background: #ecfdf5;
         }
     }
 
@@ -50,10 +53,13 @@
         &__button {
             padding: $ems-main-spacing-2 $ems-main-spacing-4;
             font-size: $ems-main-spacing-4;
+            border: none;
+            border-radius: .5rem;
         }
 
         &__button:hover {
             cursor: pointer;
+            background: #ecfdf5;
         }
     }
 

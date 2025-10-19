@@ -9,6 +9,7 @@ type DetailsPersonalProps = {
   };
   handleFormValue: (event: React.ChangeEvent<HTMLInputElement>) => void;
   pageHasError?: boolean | false;
+  fieldType?: string | '';
 };
 
 export const DetailsPersonal = ({
@@ -22,16 +23,19 @@ export const DetailsPersonal = ({
         pageHasError={pageHasError || false}
         fieldName={formDetails.name || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="name"
       />
       <EmployeeRegistrationFormInputField
         pageHasError={pageHasError || false}
         fieldName={formDetails.placeOfBirth || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="placeOfBirth"
       />
       <EmployeeRegistrationFormInputField
         pageHasError={pageHasError || false}
         fieldName={formDetails.city || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="city"
       />
     </div>
   );

@@ -20,11 +20,13 @@ export const DetailsEmployment = ({
         pageHasError={pageHasError || false}
         fieldName={formDetails.location || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="location"
       />
       <EmployeeRegistrationFormInputField
         pageHasError={pageHasError || false}
         fieldName={formDetails.company || ''}
         handleFormValue={handleFormValue}
+        inputFieldName="company"
       />
     </div>
   );
