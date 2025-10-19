@@ -1,0 +1,60 @@
+@use '../../../../../packages/designToken//src/variablesDefault' as *;
+
+.employee-registration {
+    &__input {
+        display: flex;
+        flex-direction: column;
+        margin: $ems-main-spacing-2 $ems-main-spacing-0;
+
+        span {
+            text-align: left;
+        }
+
+        input{
+            border: 1px solid black;
+            padding: $ems-main-spacing-1;
+            border-radius: $ems-main-spacing-1;
+        }
+    }
+
+    &__tab{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $ems-main-spacing-8;
+
+        &__active {
+            background-color: $ems-main-color-primary;
+        }
+
+        &__button {
+            padding: $ems-main-spacing-2 $ems-main-spacing-4;
+            font-size: $ems-main-spacing-4;
+        }
+
+        &__button:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: $ems-main-spacing-8;
+
+        &__button {
+            padding: $ems-main-spacing-2 $ems-main-spacing-4;
+            font-size: $ems-main-spacing-4;
+        }
+
+        &__button:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__error {
+        text-align: left;
+        color: red;
+        font-size: $ems-main-spacing-3;
+        font-weight: bold;
+    }
+}
