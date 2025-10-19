@@ -37,10 +37,8 @@ export const EmployeeRegistration = () => {
     (item) => item.name === currentTabName
   )?.page;
 
-  const handleTabClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
-    await checkPageError();
-
-    if (pageHasError) {
+  const handleTabClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (checkPageError()) {
       return;
     }
 
@@ -80,10 +78,8 @@ export const EmployeeRegistration = () => {
     }
   };
 
-  const handleFormSubmit = async () => {
-    await checkPageError();
-
-    if (pageHasError) {
+  const handleFormSubmit = () => {
+    if (checkPageError()) {
       return;
     }
 
