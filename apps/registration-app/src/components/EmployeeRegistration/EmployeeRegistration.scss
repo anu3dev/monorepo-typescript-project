@@ -8,9 +8,15 @@
 
         &__label {
             text-align: left;
+
+            &__error {
+                text-align: left;
+                color: red;
+                font-size: $ems-main-spacing-4;
+            }
         }
 
-        input{
+        input {
             border: 1px solid black;
             padding: $ems-main-spacing-1;
             border-radius: $ems-main-spacing-1;
@@ -23,7 +29,7 @@
         }
     }
 
-    &__tab{
+    &__tab {
         display: flex;
         justify-content: space-between;
         margin-bottom: $ems-main-spacing-8;
@@ -58,9 +64,12 @@
         }
     }
 
-    &__error {
-        text-align: left;
-        color: red;
-        font-size: $ems-main-spacing-4;
+    
+
+    &__heading {
+        font-weight: bold;
+        margin: $ems-main-spacing-4 0 $ems-main-spacing-8;
+        font-size: $ems-main-spacing-8;
+        color: $ems-main-color-primary;
     }
 }

@@ -22,7 +22,7 @@ export const EmployeeRegistrationFormInputField = ({
       <div className="employee-registration__input__label">
         <span>{inputLabelName}</span>
         {pageHasError && !fieldName && (
-          <span className="employee-registration__error">
+          <span className="employee-registration__input__label__error">
             {` please fix the error`}
           </span>
         )}

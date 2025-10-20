@@ -96,6 +96,9 @@ export const EmployeeRegistration = () => {
 
   return (
     <div className="employee-registration">
+      <div className="employee-registration__heading">
+        Employee registration
+      </div>
       <div className="employee-registration__tab">
         {TAB_DETAILS.map((item) => (
           <button
