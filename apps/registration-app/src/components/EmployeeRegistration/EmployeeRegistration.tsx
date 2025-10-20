@@ -37,14 +37,6 @@ export const EmployeeRegistration = () => {
     (item) => item.name === currentTabName
   )?.page;
 
-  const handleTabClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (checkPageError()) {
-      return;
-    }
-
-    setCurrentTabName(e.currentTarget.innerText);
-  };
-
   const handleFormValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormDetails((prev) => ({
@@ -87,7 +79,7 @@ export const EmployeeRegistration = () => {
   };
 
   const handleNavigation = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (checkPageError()) {
+    if (checkPageError() && e.currentTarget.innerText === 'Next') {
       return;
     }
 
@@ -110,7 +102,7 @@ export const EmployeeRegistration = () => {
             type="button"
             key={item.name}
             className={`employee-registration__tab__button ${item.name === currentTabName ? 'employee-registration__tab__active' : ''}`}
-            onClick={handleTabClick}
+            onClick={() => {}}
           >
             {item.name}
           </button>
