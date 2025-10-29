@@ -133,22 +133,6 @@ export class OpenAIService {
       (import.meta?.env?.VITE_OPENAI_API_KEY as string) || // Works for both local and Netlify
       '';
 
-    // Debug logging for development
-    console.warn('🔍 OpenAI API Key Check:', {
-      hasViteKey: !!import.meta?.env?.VITE_OPENAI_API_KEY,
-      allEnvKeys: Object.keys(import.meta?.env || {}),
-      keyFound: !!this.apiKey,
-      keyLength: this.apiKey.length,
-      nodeEnv: import.meta?.env?.NODE_ENV,
-      mode: import.meta?.env?.MODE,
-    });
-
-    if (!this.apiKey || this.apiKey === '<API_KEY>') {
-      console.warn(
-        '❌ OpenAI API key not found. Please set VITE_OPENAI_API_KEY in your .env file (local) or Netlify Dashboard (production).'
-      );
-    }
-
     // Initialize with system message containing resume data
     this.conversationHistory = [
       {
