@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { openAIService } from '@ems/api';
 import './ChatOverlay.scss';
 
 interface Message {
@@ -33,39 +34,12 @@ const ChatOverlay: React.FC<ChatOverlayProps> = ({ onClose }) => {
     scrollToBottom();
   }, [messages]);
 
-  const generateBotResponse = (userMessage: string): string => {
-    const lowerMessage = userMessage.toLowerCase();
-
-    if (
-      lowerMessage.includes('hello') ||
-      lowerMessage.includes('hi') ||
-      lowerMessage.includes('hey')
-    ) {
-      return "Hello! Great to see you on Anurag's portfolio. What would you like to know about his work?";
-    } else if (
-      lowerMessage.includes('portfolio') ||
-      lowerMessage.includes('project')
-    ) {
-      return 'Anurag has built some amazing projects! This portfolio showcases his expertise in React, TypeScript, and modern web development. Which project interests you most?';
-    } else if (
-      lowerMessage.includes('skills') ||
-      lowerMessage.includes('technology')
-    ) {
-      return "Anurag specializes in full-stack development with React, TypeScript, Node.js, and modern DevOps practices. He's passionate about creating scalable, user-friendly applications.";
-    } else if (
-      lowerMessage.includes('contact') ||
-      lowerMessage.includes('hire')
-    ) {
-      return "You can reach Anurag through LinkedIn or GitHub (links in the footer). He's always open to discussing new opportunities and interesting projects!";
-    } else if (lowerMessage.includes('experience')) {
-      return 'Anurag has 9+ years of experience in software development, specializing in modern web technologies and building enterprise-grade applications.';
-    } else {
-      const responses = [
-        "That's interesting! Is there anything specific about Anurag's work you'd like to know more about?",
-        "I'd be happy to help! Feel free to ask about Anurag's projects, skills, or experience.",
-        "Great question! What aspect of Anurag's portfolio would you like to explore?",
-      ];
-      return responses[Math.floor(Math.random() * responses.length)];
+  const generateBotResponse = async (userMessage: string): Promise<string> => {
+    try {
+      return await openAIService.sendMessage(userMessage);
+    } catch (error) {
+      console.error('Error generating response:', error);
+      return "I apologize, but I'm having trouble processing your request right now. Please try again later.";
     }
   };
 
@@ -79,24 +53,35 @@ const ChatOverlay: React.FC<ChatOverlayProps> = ({ onClose }) => {
       timestamp: new Date(),
     };
 
+    const currentInput = inputText; // Store the input before clearing
     setMessages((prev) => [...prev, userMessage]);
     setInputText('');
     setIsTyping(true);
 
-    setTimeout(
-      () => {
-        const botResponse: Message = {
-          id: (Date.now() + 1).toString(),
-          text: generateBotResponse(inputText),
-          sender: 'bot',
-          timestamp: new Date(),
-        };
+    try {
+      // Get AI response
+      const responseText = await generateBotResponse(currentInput);
 
-        setMessages((prev) => [...prev, botResponse]);
-        setIsTyping(false);
-      },
-      800 + Math.random() * 800
-    );
+      const botResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: responseText,
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, botResponse]);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      const errorResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I'm sorry, I encountered an error. Please try again.",
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorResponse]);
+    } finally {
+      setIsTyping(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {

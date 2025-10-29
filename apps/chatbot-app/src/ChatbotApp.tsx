@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Navigation, Footer } from '../../../packages/ui/src';
+import { openAIService } from '@ems/api';
 import './chatbotApp.scss';
 
 interface Message {
@@ -31,43 +32,12 @@ const ChatbotApp: React.FC = () => {
     scrollToBottom();
   }, [messages]);
 
-  const generateBotResponse = (userMessage: string): string => {
-    const lowerMessage = userMessage.toLowerCase();
-
-    // Simple response logic - you can enhance this
-    if (
-      lowerMessage.includes('hello') ||
-      lowerMessage.includes('hi') ||
-      lowerMessage.includes('hey')
-    ) {
-      return 'Hello Anurag! Great to see you here. What would you like to chat about?';
-    } else if (lowerMessage.includes('how are you')) {
-      return "I'm doing great, thank you for asking! I'm here and ready to help you with anything you need.";
-    } else if (
-      lowerMessage.includes('portfolio') ||
-      lowerMessage.includes('project')
-    ) {
-      return "Your portfolio looks amazing! I can see you've built a sophisticated monorepo with React, TypeScript, and a great design system. What specific project would you like to discuss?";
-    } else if (lowerMessage.includes('help')) {
-      return "I'm here to help! You can ask me about your projects, coding questions, or just have a friendly chat. What do you need assistance with?";
-    } else if (lowerMessage.includes('weather')) {
-      return "I don't have access to current weather data, but I hope you're having a great day! Is there something else I can help you with?";
-    } else if (lowerMessage.includes('time')) {
-      return `The current time is ${new Date().toLocaleTimeString()}. How can I assist you today?`;
-    } else if (
-      lowerMessage.includes('bye') ||
-      lowerMessage.includes('goodbye')
-    ) {
-      return 'Goodbye Anurag! It was great chatting with you. Feel free to come back anytime! 👋';
-    } else {
-      const responses = [
-        "That's interesting! Tell me more about that.",
-        'I understand. Can you elaborate on that?',
-        'Thanks for sharing that with me. What else is on your mind?',
-        "That's a great point! I'd love to hear your thoughts on this.",
-        'Absolutely! What would you like to explore further?',
-      ];
-      return responses[Math.floor(Math.random() * responses.length)];
+  const generateBotResponse = async (userMessage: string): Promise<string> => {
+    try {
+      return await openAIService.sendMessage(userMessage);
+    } catch (error) {
+      console.error('Error generating response:', error);
+      return "I apologize, but I'm having trouble processing your request right now. Please try again later.";
     }
   };
 
@@ -81,25 +51,35 @@ const ChatbotApp: React.FC = () => {
       timestamp: new Date(),
     };
 
+    const currentInput = inputText; // Store the input before clearing
     setMessages((prev) => [...prev, userMessage]);
     setInputText('');
     setIsTyping(true);
 
-    // Simulate typing delay
-    setTimeout(
-      () => {
-        const botResponse: Message = {
-          id: (Date.now() + 1).toString(),
-          text: generateBotResponse(inputText),
-          sender: 'bot',
-          timestamp: new Date(),
-        };
+    try {
+      // Get AI response
+      const responseText = await generateBotResponse(currentInput);
 
-        setMessages((prev) => [...prev, botResponse]);
-        setIsTyping(false);
-      },
-      1000 + Math.random() * 1000
-    );
+      const botResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: responseText,
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+
+      setMessages((prev) => [...prev, botResponse]);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      const errorResponse: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I'm sorry, I encountered an error. Please try again.",
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorResponse]);
+    } finally {
+      setIsTyping(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
@@ -110,10 +90,11 @@ const ChatbotApp: React.FC = () => {
   };
 
   const clearChat = () => {
+    openAIService.clearHistory();
     setMessages([
       {
         id: '1',
-        text: 'Chat cleared! Hi again Anurag! How can I help you?',
+        text: 'Chat cleared! Hi again! How can I help you today?',
         sender: 'bot',
         timestamp: new Date(),
       },

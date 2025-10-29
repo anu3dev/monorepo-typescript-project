@@ -1,5 +1,7 @@
 ﻿import './types';
 
+export { OpenAIService, openAIService } from './openai';
+
 export async function apiFetch<T = unknown>(
   path: string,
   opts: RequestInit = {}
