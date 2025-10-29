@@ -1,7 +1,7 @@
 [build]
   publish = "apps/main-app/dist"
   command = "cd apps/main-app && pnpm install && pnpm build"
-  environment = { NODE_ENV = "production" }
+  environment = { NODE_ENV = "Production" }
 
 [[redirects]]
   from = "/*"
