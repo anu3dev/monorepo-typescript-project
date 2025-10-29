@@ -47,13 +47,6 @@ export const Footer: React.FC<FooterProps> = ({ onOpenChat }) => {
             growth.
           </p>
         </div>
-        {/* <div className="ems-footer__chat-bot">
-          <img
-            className="ems-footer__chat-bot__image"
-            alt="Chat Bot"
-            src="/images/chat-bot.png"
-          />
-        </div> */}
         {onOpenChat ? (
           <button
             onClick={onOpenChat}
