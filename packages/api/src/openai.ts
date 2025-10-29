@@ -21,9 +21,9 @@ const ANURAG_RESUME_DATA = {
     email: 'anu3dev@gmail.com',
     phone: '+1 (612) 456-6855',
     links: {
-      Git: 'Git',
-      LinkedIn: 'LinkedIn',
-      Portfolio: 'Portfolio',
+      Git: 'https://github.com/anu3dev',
+      LinkedIn: 'https://www.linkedin.com/in/anu3dev',
+      Portfolio: 'https://e2eonline.com',
     },
   },
   summary:
