@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { DetailsHealth } from './DetailsHealth';
 import { DetailsPersonal } from './DetailsPersonal';
 import { DetailsEmployment } from './DetailsEmployment';
@@ -21,6 +21,7 @@ const TAB_DETAILS = [
 ];
 
 export const EmployeeRegistration = () => {
+  const currentRef = useRef<HTMLDivElement>(null);
   const [currentTabName, setCurrentTabName] = useState('Personal');
   const [formDetails, setFormDetails] = useState({
     name: '',
@@ -32,6 +33,12 @@ export const EmployeeRegistration = () => {
     location: '',
   });
   const [pageHasError, setPageHasError] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 100 });
+
+  useEffect(() => {
+    const div = currentRef.current;
+    div?.addEventListener('click', () => console.log('hello'));
+  }, []);
 
   const ActiveTab = TAB_DETAILS.find(
     (item) => item.name === currentTabName
@@ -94,8 +101,41 @@ export const EmployeeRegistration = () => {
     );
   };
 
+  document.addEventListener('mousemove', (event) => {
+    setMousePosition({ x: event.clientX, y: event.clientY });
+  });
+
+  // const box = document.getElementById('anurag');
+  // box = divRef.current;
+  // const div = divRef.current;
+  // div?.addEventListener('click', () => console.log('hello'));
+
+  //const div = document.getElementById('myDiv');
+
+  // // Add any event listener you like
+  // div?.addEventListener('click', () => {
+  //   console.log('Div clicked!');
+  // });
+
+  // div?.addEventListener('mousemove', (e) => {
+  //   console.log('Mouse at:', e.clientX, e.clientY);
+  // });
+
   return (
-    <div className="employee-registration">
+    <div className="employee-registration" ref={currentRef}>
+      <div
+        ref={currentRef}
+        style={{
+          position: 'absolute',
+          left: mousePosition.x,
+          top: mousePosition.y,
+        }}
+      >
+        <textarea
+          className="employee-registration__dragme"
+          placeholder="Enter text or drag me"
+        />
+      </div>
       <div className="employee-registration__heading">
         Employee registration
       </div>

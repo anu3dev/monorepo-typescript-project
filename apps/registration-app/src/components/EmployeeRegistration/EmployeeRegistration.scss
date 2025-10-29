@@ -64,12 +64,21 @@
         }
     }
 
-    
-
     &__heading {
         font-weight: bold;
         margin: $ems-main-spacing-4 0 $ems-main-spacing-16;
         font-size: $ems-main-spacing-8;
         color: $ems-main-color-primary;
+    }
+
+    &__dragme {
+        border: 1px solid black;
+        border-radius: $ems-main-spacing-2;
+        height: $ems-main-spacing-20;
+        padding: $ems-main-spacing-3;
+        background: #fbdf5c;
+    }
+    &__dragme:hover {
+        background: #ffb7c3;
     }
 }

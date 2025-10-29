@@ -37,13 +37,20 @@ export const Footer: React.FC = () => {
             </a>
           </div>
         </div>
-
         <div className="ems-footer-bottom">
           <p className="ems-footer-copyright">
             © {currentYear} Anurag Kumar. Built with passion for learning and
             growth.
           </p>
         </div>
+        {/* <div className="ems-footer__chat-bot">
+          <img
+            className="ems-footer__chat-bot__image"
+            alt="Chat Bot"
+            src="/images/chat-bot.png"
+          />
+        </div> */}
+        <div className="ems-footer__chat-bubble">Talk to AI (Anurag)</div>
       </div>
     </footer>
   );
