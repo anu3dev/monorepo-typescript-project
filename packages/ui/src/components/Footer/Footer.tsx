@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenChat?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenChat }) => {
   const currentYear = new Date().getFullYear();
 
   return (
@@ -50,7 +54,24 @@ export const Footer: React.FC = () => {
             src="/images/chat-bot.png"
           />
         </div> */}
-        <div className="ems-footer__chat-bubble">Talk to AI (Anurag)</div>
+        {onOpenChat ? (
+          <button
+            onClick={onOpenChat}
+            className="ems-footer__chat-bubble"
+            type="button"
+          >
+            🤖 Talk to AI (Anurag)
+          </button>
+        ) : (
+          <a
+            href="/chatbot"
+            className="ems-footer__chat-bubble"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🤖 Talk to AI (Anurag)
+          </a>
+        )}
       </div>
     </footer>
   );
